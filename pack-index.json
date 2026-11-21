@@ -5471,6 +5471,11 @@
       "sha256": "2f084b728383d9de7e9c652c3a92cad086e0b38f131b61f8900d25ba18734e44"
     },
     {
+      "path": "mods/Patchouli-1.21.1-93-NEOFORGE.jar",
+      "size": 646777,
+      "sha256": "959af52ed6640c316c3a8469203420be4aeea11ad6603890ba83bf48f5d9f993"
+    },
+    {
       "path": "mods/Perception-NEOFORGE-0.2.1+1.21.1.jar",
       "size": 78664,
       "sha256": "e9e6b126fdc2cab3deda2f15ebd20c7492aa620ebfd1f5af9095db4e63277df5"
@@ -6331,6 +6336,11 @@
       "sha256": "53284c0ff177fb4c22bb3d3f19f2c7c1ece944f52e47ae7ebc7e09574a795343"
     },
     {
+      "path": "mods/hexcast-neoforged-1.21.1-0.11.1-19+neoforge.1.21.1.jar",
+      "size": 3467212,
+      "sha256": "54739b9fb0b4bf1e00d4e3c1c9fbc28d3f28f13d98f9ee049c9f9d4dec5a8ec0"
+    },
+    {
       "path": "mods/hunters_return-1.21.1-20.12.0.jar",
       "size": 571269,
       "sha256": "adfc73392123c72ef03ef4694130aad173293c5bb66b9085606e11251bd094c1"
@@ -6684,6 +6694,11 @@
       "path": "mods/particular-1.21.1-NeoForge-1.5.7.jar",
       "size": 315841,
       "sha256": "42c5ba95472c233a455da440e08a74be69cba616493292c0830cf47a47a9498e"
+    },
+    {
+      "path": "mods/paucal-0.7.0+neoforge-1.21.1.jar",
+      "size": 257735,
+      "sha256": "0989af16436cecdaceeb031d48f29db00da556bf4178edac4538153cb82be385"
     },
     {
       "path": "mods/player-animation-lib-forge-2.0.4+1.21.1.jar",

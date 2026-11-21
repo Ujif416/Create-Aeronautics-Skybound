@@ -6336,6 +6336,16 @@
       "sha256": "53284c0ff177fb4c22bb3d3f19f2c7c1ece944f52e47ae7ebc7e09574a795343"
     },
     {
+      "path": "mods/hexal-0.3.1-NEOFORGE-DEVEL-pre-13.jar",
+      "size": 872913,
+      "sha256": "baa8d266fd1e7b710dbb3a1ab83978964a4032471a0e1810d6e06548fef86048"
+    },
+    {
+      "path": "mods/hexcasting-neoforge-1.21.1-0.12.0-devel-pre-64.jar",
+      "size": 4234343,
+      "sha256": "702c2f98160d73975c4535a547ed94ab5c29a496f0e77dc468ce363b198095f8"
+    },
+    {
       "path": "mods/hunters_return-1.21.1-20.12.0.jar",
       "size": 571269,
       "sha256": "adfc73392123c72ef03ef4694130aad173293c5bb66b9085606e11251bd094c1"
@@ -6354,6 +6364,11 @@
       "path": "mods/improved-village-placement-1.2.0-neoforge-21.1.jar",
       "size": 141569,
       "sha256": "b5ebdeccf9dbc66a2a3361a60f6e979389dd36dc97de83a9f825839850e5ae98"
+    },
+    {
+      "path": "mods/inline-neoforge-1.21.1-1.2.2.jar",
+      "size": 215488,
+      "sha256": "694ead6f595f106c5b82fbd8de30816f9f72e9ec5bc4a6c8b754e514bee7be2d"
     },
     {
       "path": "mods/interiors-1.21.1-neoforge-0.6.1.jar",
@@ -6636,6 +6651,11 @@
       "sha256": "808fe9ba67162b7626005a51a9048454779afe0790eb63874427182370949a04"
     },
     {
+      "path": "mods/moreiotas-0.1.1-1.21.1-devel-pre-4.jar",
+      "size": 1079146,
+      "sha256": "ef42e8f195df99527ae0f57e63c6fd529a423492a6be22fdf669e19087649412"
+    },
+    {
       "path": "mods/mowziesmobs-1.21.1-1.8.2.jar",
       "size": 36042925,
       "sha256": "b8e7e39fb6430326de7fbb193db56588ee8bd04d0054527924fe588f37131e4f"
@@ -6689,6 +6709,11 @@
       "path": "mods/particular-1.21.1-NeoForge-1.5.7.jar",
       "size": 315841,
       "sha256": "42c5ba95472c233a455da440e08a74be69cba616493292c0830cf47a47a9498e"
+    },
+    {
+      "path": "mods/paucal-0.7.1-noelle+1.21.1-neoforge.jar",
+      "size": 268315,
+      "sha256": "9446fa8b11bba8ecd4d3c10121ef0db5197dab484eb5f0e5356ae68872f066d3"
     },
     {
       "path": "mods/player-animation-lib-forge-2.0.4+1.21.1.jar",

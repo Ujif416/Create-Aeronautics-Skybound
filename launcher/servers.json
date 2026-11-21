@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogRevision": "auto-4e600f09d317204d",
+  "catalogRevision": "auto-aa0ca54d87a19a12",
   "servers": [
     {
       "id": "create-skybound",
@@ -16,11 +16,11 @@
         "version": "21.1.266"
       },
       "java": 21,
-      "packRevision": "auto-4e600f09d317204d",
+      "packRevision": "auto-aa0ca54d87a19a12",
       "pack": {
         "repository": "Ujif416/Create-Aeronautics-Skybound",
-        "commit": "4e600f09d317204d13fe111d350b9f1740faa622",
-        "indexSha256": "dbbd71b2b15868d1735454f692ff297b5271e161d22cf32109c9b0ff964f29f1",
+        "commit": "aa0ca54d87a19a12dfc6e3bc68d32af49539ff96",
+        "indexSha256": "6dd03f2f6727968f9ffde83a7576484ca2fc745f4ed0a35b4a04dca3a62f9368",
         "exclude": [
           {
             "path": "mods/balm-neoforge-1.21.1-21.0.63.jar",

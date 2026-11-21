@@ -6336,11 +6336,6 @@
       "sha256": "53284c0ff177fb4c22bb3d3f19f2c7c1ece944f52e47ae7ebc7e09574a795343"
     },
     {
-      "path": "mods/hexcast-neoforged-1.21.1-0.11.1-19+neoforge.1.21.1.jar",
-      "size": 3467212,
-      "sha256": "54739b9fb0b4bf1e00d4e3c1c9fbc28d3f28f13d98f9ee049c9f9d4dec5a8ec0"
-    },
-    {
       "path": "mods/hunters_return-1.21.1-20.12.0.jar",
       "size": 571269,
       "sha256": "adfc73392123c72ef03ef4694130aad173293c5bb66b9085606e11251bd094c1"

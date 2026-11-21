@@ -6691,11 +6691,6 @@
       "sha256": "42c5ba95472c233a455da440e08a74be69cba616493292c0830cf47a47a9498e"
     },
     {
-      "path": "mods/paucal-0.7.0+neoforge-1.21.1.jar",
-      "size": 257735,
-      "sha256": "0989af16436cecdaceeb031d48f29db00da556bf4178edac4538153cb82be385"
-    },
-    {
       "path": "mods/player-animation-lib-forge-2.0.4+1.21.1.jar",
       "size": 203149,
       "sha256": "dbe5de45f5cd60c0e5e47af14e6d564534a98456e973cf670cb881f6938eee92"

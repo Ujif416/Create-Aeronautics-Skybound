@@ -6946,6 +6946,11 @@
       "sha256": "fc824a91cfe22e137c9014ed608ee9bf35f16490d2162b687666332c6eb3a555"
     },
     {
+      "path": "mods/thaumaturge-1.21.1-NeoForge-1.1.0.jar",
+      "size": 33840402,
+      "sha256": "2671390136fad5ac9abd36797cb0a5a938967a5c32399442589bb7720d463900"
+    },
+    {
       "path": "mods/the_bumblezone-7.17.0+1.21.1-neoforge.jar",
       "size": 83640371,
       "sha256": "08f1590fbfa16fb00cc2ddb4a7fabd1a34e71ebb80c963fcde1fe6db6e99a0e7"

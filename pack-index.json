@@ -6736,11 +6736,6 @@
       "sha256": "976862ec51386334300b72a9c25c343d12af82b9af37a8417f44093f57eac191"
     },
     {
-      "path": "mods/powergrid-mc1.21.1-0.6.2.jar",
-      "size": 5738480,
-      "sha256": "e40d67a874431925d502af88e85064883c67936cfd689033d7df560cffcf19e7"
-    },
-    {
       "path": "mods/prickle-neoforge-1.21.1-21.1.11.jar",
       "size": 84812,
       "sha256": "ccf46c442ed3c7fe41ad056f0940560829ec4dd88360985dfacd78f4614eb167"

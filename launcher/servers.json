@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogRevision": "auto-6e61a0f8ab3df7f3",
+  "catalogRevision": "arcanum-2026-11-27.1",
   "servers": [
     {
       "id": "create-skybound",
@@ -31,6 +31,28 @@
             "sha256": "b7bde1aba44206c93dc5bfd8ce951b6e67b0a4bced7ecf2e74b9a68f74a08e31"
           }
         ]
+      }
+    },
+    {
+      "id": "arcanum-machina",
+      "name": "Arcanum & Machina",
+      "description": "Маги против Техников — биомные парящие континенты, раздельные пути Арканы и Механики, воздушные корабли.",
+      "address": {
+        "host": "195.58.152.32",
+        "port": 25603
+      },
+      "minecraft": "1.21.1",
+      "loader": {
+        "type": "neoforge",
+        "version": "21.1.266"
+      },
+      "java": 21,
+      "packRevision": "arcanum-2026-11-27.1",
+      "pack": {
+        "repository": "Ujif416/Create-Aeronautics-Skybound",
+        "commit": "9f672bdf28bc7220d77e02eb57575be4dc1557f5",
+        "indexSha256": "c507f9cc4d524d4b62ddbb676af28493788914bf8cd255d1930b1f06b77f9d57",
+        "exclude": []
       }
     }
   ]

@@ -47,7 +47,12 @@ def publish():
     index_path = pathlib.Path('pack-index.json')
     index_path.write_bytes((json.dumps(index, ensure_ascii=False, indent=2) + '\n').encode())
     git('add', 'pack-index.json')
-    if subprocess.call(['git', 'diff', '--cached', '--quiet']) != 0:
+    # Updating a different server's catalog entry must preserve the published Skybound revision.
+    index_changed = subprocess.call(['git', 'diff', '--cached', '--quiet', '--', 'pack-index.json']) != 0
+    if not index_changed and server['pack']['indexSha256'] == digest(index_path):
+        print('Skybound index already published')
+        return
+    if index_changed:
         git('commit', '-m', 'Update client pack index [automated]')
     # This commit already contains every payload file and the generated index.
     commit = git('rev-parse', 'HEAD')
@@ -65,4 +70,3 @@ def publish():
 
 if __name__ == '__main__':
     publish()
-

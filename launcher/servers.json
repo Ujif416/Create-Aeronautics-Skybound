@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogRevision": "arcanum-2026-11-27.1",
+  "catalogRevision": "arcanum-2026-11-27.2",
   "servers": [
     {
       "id": "create-skybound",
@@ -47,12 +47,17 @@
         "version": "21.1.266"
       },
       "java": 21,
-      "packRevision": "arcanum-2026-11-27.1",
+      "packRevision": "arcanum-2026-11-27.2",
       "pack": {
         "repository": "Ujif416/Create-Aeronautics-Skybound",
         "commit": "9f672bdf28bc7220d77e02eb57575be4dc1557f5",
         "indexSha256": "c507f9cc4d524d4b62ddbb676af28493788914bf8cd255d1930b1f06b77f9d57",
-        "exclude": []
+        "exclude": [
+          {
+            "path": "mods/CinematicInteraction-NeoForge-1.21.1-0.18.2.jar",
+            "sha256": "e7b516f510959f4f249d75445cc46d44a6cc12332bedcbe1d3ded9f89a16d304"
+          }
+        ]
       }
     }
   ]

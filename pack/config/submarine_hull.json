@@ -14065,6 +14065,10 @@
     "maxWaterDepth": 44,
     "implosionChance": 0.36137056
   },
+  "diagonalfences:hexcasting/edified_fence": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
   "diagonalfences:mcwbiomesoplenty/cypress_hedge": {
     "maxWaterDepth": 18,
     "implosionChance": 0.57176787
@@ -14912,6 +14916,14 @@
   "diagonalfences:securitycraft/reinforced_warped_fence": {
     "maxWaterDepth": 100,
     "implosionChance": 0.05
+  },
+  "diagonalfences:thaumaturge/fence_greatwood": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "diagonalfences:thaumaturge/fence_silverwood": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
   },
   "diagonalfences:undergarden/ancient_root_fence": {
     "maxWaterDepth": 44,
@@ -16616,6 +16628,38 @@
   "diagonalwalls:tfmg/yellow_rebar_concrete_wall": {
     "maxWaterDepth": 234,
     "implosionChance": 0.05
+  },
+  "diagonalwalls:thaumaturge/wall_ancient": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "diagonalwalls:thaumaturge/wall_ancient_rock": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "diagonalwalls:thaumaturge/wall_ancient_tile": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "diagonalwalls:thaumaturge/wall_arcane_brick": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "diagonalwalls:thaumaturge/wall_arcane_stone": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "diagonalwalls:thaumaturge/wall_eldritch_rock": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "diagonalwalls:thaumaturge/wall_eldritch_stone": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "diagonalwalls:thaumaturge/wall_eldritch_tile": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
   },
   "diagonalwalls:undergarden/depthrock_brick_wall": {
     "maxWaterDepth": 47,
@@ -21292,6 +21336,246 @@
   "gravestone:gravestone": {
     "maxWaterDepth": 400,
     "implosionChance": 0.05
+  },
+  "hexal:mediafied_storage": {
+    "maxWaterDepth": 236,
+    "implosionChance": 0.05
+  },
+  "hexal:slipway": {
+    "maxWaterDepth": 267,
+    "implosionChance": 0.05
+  },
+  "hexcasting:akashic_bookshelf": {
+    "maxWaterDepth": 51,
+    "implosionChance": 0.2890562
+  },
+  "hexcasting:akashic_ligature": {
+    "maxWaterDepth": 51,
+    "implosionChance": 0.2890562
+  },
+  "hexcasting:akashic_record": {
+    "maxWaterDepth": 51,
+    "implosionChance": 0.2890562
+  },
+  "hexcasting:amethyst_bricks": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "hexcasting:amethyst_bricks_small": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "hexcasting:amethyst_dust_block": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "hexcasting:amethyst_edified_leaves": {
+    "maxWaterDepth": 18,
+    "implosionChance": 0.57176787
+  },
+  "hexcasting:amethyst_pillar": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "hexcasting:amethyst_sconce": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "hexcasting:amethyst_tiles": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "hexcasting:ancient_scroll_paper": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "hexcasting:ancient_scroll_paper_lantern": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "hexcasting:aventurine_edified_leaves": {
+    "maxWaterDepth": 18,
+    "implosionChance": 0.57176787
+  },
+  "hexcasting:citrine_edified_leaves": {
+    "maxWaterDepth": 18,
+    "implosionChance": 0.57176787
+  },
+  "hexcasting:conjured_block": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "hexcasting:conjured_light": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "hexcasting:directrix/boolean": {
+    "maxWaterDepth": 58,
+    "implosionChance": 0.23905621
+  },
+  "hexcasting:directrix/empty": {
+    "maxWaterDepth": 58,
+    "implosionChance": 0.23905621
+  },
+  "hexcasting:directrix/redstone": {
+    "maxWaterDepth": 58,
+    "implosionChance": 0.23905621
+  },
+  "hexcasting:edified_button": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_door": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_fence": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_fence_gate": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_log": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_log_amethyst": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_log_aventurine": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_log_citrine": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_log_purple": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_panel": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_planks": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_pressure_plate": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_slab": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_stairs": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_tile": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_trapdoor": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:edified_wood": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:impetus/empty": {
+    "maxWaterDepth": 58,
+    "implosionChance": 0.23905621
+  },
+  "hexcasting:impetus/look": {
+    "maxWaterDepth": 58,
+    "implosionChance": 0.23905621
+  },
+  "hexcasting:impetus/redstone": {
+    "maxWaterDepth": 58,
+    "implosionChance": 0.23905621
+  },
+  "hexcasting:impetus/rightclick": {
+    "maxWaterDepth": 58,
+    "implosionChance": 0.23905621
+  },
+  "hexcasting:quenched_allay": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "hexcasting:quenched_allay_bricks": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "hexcasting:quenched_allay_bricks_small": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "hexcasting:quenched_allay_tiles": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "hexcasting:scroll_paper": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "hexcasting:scroll_paper_lantern": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "hexcasting:slate": {
+    "maxWaterDepth": 58,
+    "implosionChance": 0.23905621
+  },
+  "hexcasting:slate_amethyst_bricks": {
+    "maxWaterDepth": 46,
+    "implosionChance": 0.33905622
+  },
+  "hexcasting:slate_amethyst_bricks_small": {
+    "maxWaterDepth": 46,
+    "implosionChance": 0.33905622
+  },
+  "hexcasting:slate_amethyst_pillar": {
+    "maxWaterDepth": 46,
+    "implosionChance": 0.33905622
+  },
+  "hexcasting:slate_amethyst_tiles": {
+    "maxWaterDepth": 46,
+    "implosionChance": 0.33905622
+  },
+  "hexcasting:slate_block": {
+    "maxWaterDepth": 46,
+    "implosionChance": 0.33905622
+  },
+  "hexcasting:slate_bricks": {
+    "maxWaterDepth": 46,
+    "implosionChance": 0.33905622
+  },
+  "hexcasting:slate_bricks_small": {
+    "maxWaterDepth": 46,
+    "implosionChance": 0.33905622
+  },
+  "hexcasting:slate_pillar": {
+    "maxWaterDepth": 46,
+    "implosionChance": 0.33905622
+  },
+  "hexcasting:slate_tiles": {
+    "maxWaterDepth": 46,
+    "implosionChance": 0.33905622
+  },
+  "hexcasting:stripped_edified_log": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "hexcasting:stripped_edified_wood": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
   },
   "illagerinvasion:imbuing_table": {
     "maxWaterDepth": 85,
@@ -55625,6 +55909,230 @@
     "maxWaterDepth": 84,
     "implosionChance": 0.23027754
   },
+  "powergrid:acid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "powergrid:alarm_bell": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:andesite_encased_crt": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "powergrid:basin_heater": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:battery": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:carbon_pile": {
+    "maxWaterDepth": 96,
+    "implosionChance": 0.15540898
+  },
+  "powergrid:carbon_pile_coil": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:circuit_board": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "powergrid:circuit_design_table": {
+    "maxWaterDepth": 45,
+    "implosionChance": 0.3497237
+  },
+  "powergrid:conductive_casing": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:constant_speed_motor": {
+    "maxWaterDepth": 101,
+    "implosionChance": 0.15540898
+  },
+  "powergrid:contactor": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:cord_junction": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:creative_current_source": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "powergrid:creative_resistor": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "powergrid:creative_voltage_source": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "powergrid:crt": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
+  },
+  "powergrid:current_gauge": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:device_connector": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "powergrid:electric_fan": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "powergrid:electric_motor": {
+    "maxWaterDepth": 101,
+    "implosionChance": 0.15540898
+  },
+  "powergrid:electromagnet": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:fuse_holder": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "powergrid:generator_clutch": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "powergrid:generator_commutator": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:generator_housing": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:generator_induction_rotor": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:generator_vertical_commutator": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:grounding_rod": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:heating_coil": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:heavy_wire_connector": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "powergrid:hv_breaker": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:hv_switch": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "powergrid:light_fixture": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:lv_button": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "powergrid:lv_switch": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "powergrid:mv_switch": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "powergrid:plotter": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "powergrid:portable_battery": {
+    "maxWaterDepth": 101,
+    "implosionChance": 0.15540898
+  },
+  "powergrid:potato_battery": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "powergrid:power_gauge": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:power_resistor": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
+  "powergrid:punch_card_reader": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:rheostat": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:servo": {
+    "maxWaterDepth": 101,
+    "implosionChance": 0.15540898
+  },
+  "powergrid:socket": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "powergrid:spark_gap": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "powergrid:thermometer": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:transformer_core": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:transformer_medium": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:transformer_small": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:variac": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:vertical_generator_housing": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:voltage_gauge": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:winding": {
+    "maxWaterDepth": 85,
+    "implosionChance": 0.25540897
+  },
+  "powergrid:wire_connector": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.330409
+  },
   "quarryplus:adv_pump": {
     "maxWaterDepth": 75,
     "implosionChance": 0.28521046
@@ -63909,6 +64417,106 @@
     "maxWaterDepth": 100,
     "implosionChance": 0.05
   },
+  "tamacraft:bouncy_mushroom": {
+    "maxWaterDepth": 24,
+    "implosionChance": 0.52299964
+  },
+  "tamacraft:desert_dragon_plush": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
+  "tamacraft:dragon_nest": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
+  "tamacraft:egg_lamp": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.55876356
+  },
+  "tamacraft:ember_pup_plush": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
+  "tamacraft:food_bowl": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "tamacraft:frost_penguin_plush": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
+  "tamacraft:hex_toad_plush": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
+  "tamacraft:jungle_dragon_plush": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
+  "tamacraft:mimic_plush": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
+  "tamacraft:pebble_golem_plush": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
+  "tamacraft:pet_basket": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "tamacraft:pet_bath": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "tamacraft:pet_bed": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
+  "tamacraft:pet_flap": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "tamacraft:pet_house": {
+    "maxWaterDepth": 37,
+    "implosionChance": 0.43337092
+  },
+  "tamacraft:pet_incubator": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.4806853
+  },
+  "tamacraft:pet_portrait": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "tamacraft:running_wheel": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "tamacraft:scratching_post": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.50122136
+  },
+  "tamacraft:sculk_wisp_plush": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
+  "tamacraft:tide_dragon_plush": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
+  "tamacraft:toy_box": {
+    "maxWaterDepth": 37,
+    "implosionChance": 0.43337092
+  },
+  "tamacraft:treat_dispenser": {
+    "maxWaterDepth": 57,
+    "implosionChance": 0.43337092
+  },
+  "tamacraft:void_kitten_plush": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
   "tfmg:accumulator": {
     "maxWaterDepth": 85,
     "implosionChance": 0.25540897
@@ -65652,6 +66260,1246 @@
   "tfmg:zinc_truss": {
     "maxWaterDepth": 101,
     "implosionChance": 0.15540898
+  },
+  "thaumaturge:activator_rail": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.5119372
+  },
+  "thaumaturge:advanced_alchemical_construct": {
+    "maxWaterDepth": 100,
+    "implosionChance": 0.16021048
+  },
+  "thaumaturge:advanced_alchemical_furnace": {
+    "maxWaterDepth": 111,
+    "implosionChance": 0.09350506
+  },
+  "thaumaturge:advanced_alchemical_furnace_advanced_construct_placeholder": {
+    "maxWaterDepth": 292,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:advanced_alchemical_furnace_alembic_placeholder": {
+    "maxWaterDepth": 292,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:advanced_alchemical_furnace_construct_placeholder": {
+    "maxWaterDepth": 292,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:advanced_alchemical_furnace_nozzle": {
+    "maxWaterDepth": 292,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:alchemical_construct": {
+    "maxWaterDepth": 100,
+    "implosionChance": 0.16021048
+  },
+  "thaumaturge:alembic": {
+    "maxWaterDepth": 60,
+    "implosionChance": 0.19554776
+  },
+  "thaumaturge:amber_block": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.5344535
+  },
+  "thaumaturge:amber_brick": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.5344535
+  },
+  "thaumaturge:arcane_bore": {
+    "maxWaterDepth": 95,
+    "implosionChance": 0.19554776
+  },
+  "thaumaturge:arcane_door": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.31137055
+  },
+  "thaumaturge:arcane_ear": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:arcane_ear_toggle": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:arcane_grindstone": {
+    "maxWaterDepth": 72,
+    "implosionChance": 0.30540898
+  },
+  "thaumaturge:arcane_pressure_plate": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "thaumaturge:arcane_workbench": {
+    "maxWaterDepth": 48,
+    "implosionChance": 0.32082406
+  },
+  "thaumaturge:arcane_workbench_charger": {
+    "maxWaterDepth": 50,
+    "implosionChance": 0.29771048
+  },
+  "thaumaturge:banner_black": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_blue": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_brown": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_crimson_cult": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_cyan": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_gray": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_green": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_light_blue": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_light_gray": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_lime": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_magenta": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_orange": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_pink": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_purple": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_red": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_white": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:banner_yellow": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:barrier": {
+    "maxWaterDepth": 136,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:bellows": {
+    "maxWaterDepth": 55,
+    "implosionChance": 0.24554776
+  },
+  "thaumaturge:brain_box": {
+    "maxWaterDepth": 37,
+    "implosionChance": 0.43337092
+  },
+  "thaumaturge:button_greatwood": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "thaumaturge:button_silverwood": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "thaumaturge:candle_black": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_blue": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_brown": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_cyan": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_gray": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_green": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_holder_brass": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:candle_holder_thaumium": {
+    "maxWaterDepth": 64,
+    "implosionChance": 0.39013878
+  },
+  "thaumaturge:candle_holder_void": {
+    "maxWaterDepth": 76,
+    "implosionChance": 0.31137055
+  },
+  "thaumaturge:candle_light_blue": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_light_gray": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_lime": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_magenta": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_orange": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_pink": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_purple": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_red": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_white": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:candle_yellow": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:centrifuge": {
+    "maxWaterDepth": 84,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:cinderpearl": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "thaumaturge:condenser": {
+    "maxWaterDepth": 84,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:condenser_lattice": {
+    "maxWaterDepth": 63,
+    "implosionChance": 0.39582404
+  },
+  "thaumaturge:condenser_lattice_dirty": {
+    "maxWaterDepth": 63,
+    "implosionChance": 0.39582404
+  },
+  "thaumaturge:crucible": {
+    "maxWaterDepth": 95,
+    "implosionChance": 0.19554776
+  },
+  "thaumaturge:crystal_aer": {
+    "maxWaterDepth": 19,
+    "implosionChance": 0.56518567
+  },
+  "thaumaturge:crystal_aqua": {
+    "maxWaterDepth": 19,
+    "implosionChance": 0.56518567
+  },
+  "thaumaturge:crystal_ignis": {
+    "maxWaterDepth": 19,
+    "implosionChance": 0.56518567
+  },
+  "thaumaturge:crystal_ordo": {
+    "maxWaterDepth": 19,
+    "implosionChance": 0.56518567
+  },
+  "thaumaturge:crystal_perditio": {
+    "maxWaterDepth": 19,
+    "implosionChance": 0.56518567
+  },
+  "thaumaturge:crystal_terra": {
+    "maxWaterDepth": 19,
+    "implosionChance": 0.56518567
+  },
+  "thaumaturge:crystal_vitium": {
+    "maxWaterDepth": 19,
+    "implosionChance": 0.56518567
+  },
+  "thaumaturge:deconstruction_table": {
+    "maxWaterDepth": 45,
+    "implosionChance": 0.3497237
+  },
+  "thaumaturge:deepslate_ore_amber": {
+    "maxWaterDepth": 78,
+    "implosionChance": 0.27082404
+  },
+  "thaumaturge:deepslate_ore_cinnabar": {
+    "maxWaterDepth": 82,
+    "implosionChance": 0.24582405
+  },
+  "thaumaturge:deepslate_ore_quartz": {
+    "maxWaterDepth": 90,
+    "implosionChance": 0.19582406
+  },
+  "thaumaturge:dioptra": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:door_greatwood": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.31137055
+  },
+  "thaumaturge:door_silverwood": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.31137055
+  },
+  "thaumaturge:effect_glimmer": {
+    "maxWaterDepth": 136,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:effect_sap": {
+    "maxWaterDepth": 136,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:effect_shock": {
+    "maxWaterDepth": 136,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:eldritch_altar": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:eldritch_capstone": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:eldritch_crab_spawner": {
+    "maxWaterDepth": 130,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:eldritch_crust": {
+    "maxWaterDepth": 56,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:eldritch_crust_glowing": {
+    "maxWaterDepth": 96,
+    "implosionChance": 0.15660128
+  },
+  "thaumaturge:eldritch_door": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:eldritch_lock": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:eldritch_nothing": {
+    "maxWaterDepth": 202,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:eldritch_nothing_dormant": {
+    "maxWaterDepth": 202,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:eldritch_obelisk": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:eldritch_pedestal": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:eldritch_pillar": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:eldritch_portal": {
+    "maxWaterDepth": 220,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:eldritch_reliquary": {
+    "maxWaterDepth": 275,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:eldritch_rock": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:eldritch_stone": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:eldritch_stone_crystal": {
+    "maxWaterDepth": 96,
+    "implosionChance": 0.15660128
+  },
+  "thaumaturge:eldritch_stone_inert": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:eldritch_trap": {
+    "maxWaterDepth": 200,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:essentia_crystalizer": {
+    "maxWaterDepth": 76,
+    "implosionChance": 0.31021047
+  },
+  "thaumaturge:essentia_input": {
+    "maxWaterDepth": 57,
+    "implosionChance": 0.43337092
+  },
+  "thaumaturge:essentia_output": {
+    "maxWaterDepth": 57,
+    "implosionChance": 0.43337092
+  },
+  "thaumaturge:essentia_reservoir": {
+    "maxWaterDepth": 92,
+    "implosionChance": 0.21096282
+  },
+  "thaumaturge:ethereal_bloom": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "thaumaturge:everfull_urn": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:fence_gate_greatwood": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "thaumaturge:fence_gate_silverwood": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "thaumaturge:fence_greatwood": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "thaumaturge:fence_silverwood": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "thaumaturge:flesh_block": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.47763878
+  },
+  "thaumaturge:flux_gas": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:flux_goo": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:flux_scrubber": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:focal_manipulator": {
+    "maxWaterDepth": 90,
+    "implosionChance": 0.19554776
+  },
+  "thaumaturge:golem_builder": {
+    "maxWaterDepth": 90,
+    "implosionChance": 0.19554776
+  },
+  "thaumaturge:golem_fetter": {
+    "maxWaterDepth": 59,
+    "implosionChance": 0.39013878
+  },
+  "thaumaturge:grass_ambient": {
+    "maxWaterDepth": 24,
+    "implosionChance": 0.52299964
+  },
+  "thaumaturge:greatwood": {
+    "maxWaterDepth": 48,
+    "implosionChance": 0.32082406
+  },
+  "thaumaturge:hole": {
+    "maxWaterDepth": 202,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:hungry_chest": {
+    "maxWaterDepth": 45,
+    "implosionChance": 0.3497237
+  },
+  "thaumaturge:infernal_furnace": {
+    "maxWaterDepth": 287,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:infusion_matrix": {
+    "maxWaterDepth": 103,
+    "implosionChance": 0.11021047
+  },
+  "thaumaturge:inlay": {
+    "maxWaterDepth": 40,
+    "implosionChance": 0.5344535
+  },
+  "thaumaturge:item_grate": {
+    "maxWaterDepth": 64,
+    "implosionChance": 0.39013878
+  },
+  "thaumaturge:jar_brain": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.55876356
+  },
+  "thaumaturge:jar_creative": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.55876356
+  },
+  "thaumaturge:jar_node": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.55876356
+  },
+  "thaumaturge:jar_normal": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.55876356
+  },
+  "thaumaturge:jar_void": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.55876356
+  },
+  "thaumaturge:lamp_arcane": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:lamp_fertility": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:lamp_growth": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:leaves_greatwood": {
+    "maxWaterDepth": 18,
+    "implosionChance": 0.57176787
+  },
+  "thaumaturge:leaves_silverwood": {
+    "maxWaterDepth": 18,
+    "implosionChance": 0.57176787
+  },
+  "thaumaturge:levitator": {
+    "maxWaterDepth": 60,
+    "implosionChance": 0.19554776
+  },
+  "thaumaturge:liquid_death": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:log_greatwood": {
+    "maxWaterDepth": 48,
+    "implosionChance": 0.32082406
+  },
+  "thaumaturge:log_silverwood": {
+    "maxWaterDepth": 48,
+    "implosionChance": 0.32082406
+  },
+  "thaumaturge:loot_crate_common": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5925
+  },
+  "thaumaturge:loot_crate_rare": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5925
+  },
+  "thaumaturge:loot_crate_uncommon": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5925
+  },
+  "thaumaturge:loot_urn_common": {
+    "maxWaterDepth": 16,
+    "implosionChance": 0.5925
+  },
+  "thaumaturge:loot_urn_rare": {
+    "maxWaterDepth": 16,
+    "implosionChance": 0.5925
+  },
+  "thaumaturge:loot_urn_uncommon": {
+    "maxWaterDepth": 16,
+    "implosionChance": 0.5925
+  },
+  "thaumaturge:mana_pod": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "thaumaturge:matrix_cost": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:matrix_speed": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:metal_brass": {
+    "maxWaterDepth": 100,
+    "implosionChance": 0.16021048
+  },
+  "thaumaturge:metal_thaumium": {
+    "maxWaterDepth": 68,
+    "implosionChance": 0.16021048
+  },
+  "thaumaturge:metal_void": {
+    "maxWaterDepth": 100,
+    "implosionChance": 0.16021048
+  },
+  "thaumaturge:mirror": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:mirror_essentia": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_black": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_blue": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_brown": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_cyan": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_gray": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_green": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_light_blue": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_light_gray": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_lime": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_magenta": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_orange": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_pink": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_purple": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_red": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_white": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:nitor_yellow": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:node": {
+    "maxWaterDepth": 283,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:node_stabilizer": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:node_stabilizer_advanced": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:node_transducer": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:obsidian_tile": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:obsidian_totem": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:obsidian_totem_charged": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:ore_amber": {
+    "maxWaterDepth": 66,
+    "implosionChance": 0.34582406
+  },
+  "thaumaturge:ore_cinnabar": {
+    "maxWaterDepth": 70,
+    "implosionChance": 0.32082406
+  },
+  "thaumaturge:ore_quartz": {
+    "maxWaterDepth": 78,
+    "implosionChance": 0.27082404
+  },
+  "thaumaturge:pattern_crafter": {
+    "maxWaterDepth": 95,
+    "implosionChance": 0.19554776
+  },
+  "thaumaturge:paving_stone_barrier": {
+    "maxWaterDepth": 65,
+    "implosionChance": 0.3497237
+  },
+  "thaumaturge:paving_stone_travel": {
+    "maxWaterDepth": 65,
+    "implosionChance": 0.3497237
+  },
+  "thaumaturge:pedestal_ancient": {
+    "maxWaterDepth": 88,
+    "implosionChance": 0.20822293
+  },
+  "thaumaturge:pedestal_arcane": {
+    "maxWaterDepth": 88,
+    "implosionChance": 0.20822293
+  },
+  "thaumaturge:pedestal_eldritch": {
+    "maxWaterDepth": 88,
+    "implosionChance": 0.20822293
+  },
+  "thaumaturge:pillar_ancient": {
+    "maxWaterDepth": 88,
+    "implosionChance": 0.20822293
+  },
+  "thaumaturge:pillar_arcane": {
+    "maxWaterDepth": 88,
+    "implosionChance": 0.20822293
+  },
+  "thaumaturge:pillar_eldritch": {
+    "maxWaterDepth": 88,
+    "implosionChance": 0.20822293
+  },
+  "thaumaturge:placeholder_anvil": {
+    "maxWaterDepth": 287,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:placeholder_cauldron": {
+    "maxWaterDepth": 287,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:placeholder_iron_bars": {
+    "maxWaterDepth": 287,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:placeholder_nether_bricks": {
+    "maxWaterDepth": 287,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:placeholder_obsidian": {
+    "maxWaterDepth": 287,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:placeholder_table": {
+    "maxWaterDepth": 287,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:plank_greatwood": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "thaumaturge:plank_silverwood": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "thaumaturge:potion_sprayer": {
+    "maxWaterDepth": 95,
+    "implosionChance": 0.19554776
+  },
+  "thaumaturge:potted_cinderpearl": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "thaumaturge:potted_sapling_greatwood": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "thaumaturge:potted_sapling_silverwood": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "thaumaturge:potted_shimmerleaf": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "thaumaturge:potted_vishroom": {
+    "maxWaterDepth": 25,
+    "implosionChance": 0.6
+  },
+  "thaumaturge:pressure_plate_greatwood": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "thaumaturge:pressure_plate_silverwood": {
+    "maxWaterDepth": 27,
+    "implosionChance": 0.5344535
+  },
+  "thaumaturge:purifying_fluid": {
+    "maxWaterDepth": 400,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:recharge_pedestal": {
+    "maxWaterDepth": 88,
+    "implosionChance": 0.20822293
+  },
+  "thaumaturge:redstone_relay": {
+    "maxWaterDepth": 20,
+    "implosionChance": 0.6
+  },
+  "thaumaturge:research_table": {
+    "maxWaterDepth": 38,
+    "implosionChance": 0.41513878
+  },
+  "thaumaturge:sapling_greatwood": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "thaumaturge:sapling_silverwood": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "thaumaturge:shimmerleaf": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "thaumaturge:silverwood": {
+    "maxWaterDepth": 48,
+    "implosionChance": 0.32082406
+  },
+  "thaumaturge:silverwood_node_log": {
+    "maxWaterDepth": 48,
+    "implosionChance": 0.32082406
+  },
+  "thaumaturge:slab_ancient": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:slab_ancient_rock": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:slab_ancient_tile": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:slab_arcane_brick": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:slab_arcane_stone": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:slab_eldritch": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:slab_eldritch_rock": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:slab_eldritch_stone": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:slab_greatwood": {
+    "maxWaterDepth": 37,
+    "implosionChance": 0.43013877
+  },
+  "thaumaturge:slab_silverwood": {
+    "maxWaterDepth": 36,
+    "implosionChance": 0.44013876
+  },
+  "thaumaturge:smelter_aux": {
+    "maxWaterDepth": 87,
+    "implosionChance": 0.24554776
+  },
+  "thaumaturge:smelter_basic": {
+    "maxWaterDepth": 95,
+    "implosionChance": 0.19554776
+  },
+  "thaumaturge:smelter_thaumium": {
+    "maxWaterDepth": 95,
+    "implosionChance": 0.19554776
+  },
+  "thaumaturge:smelter_vent": {
+    "maxWaterDepth": 87,
+    "implosionChance": 0.24554776
+  },
+  "thaumaturge:smelter_void": {
+    "maxWaterDepth": 95,
+    "implosionChance": 0.19554776
+  },
+  "thaumaturge:spa": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stabilizer": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stairs_ancient": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stairs_ancient_rock": {
+    "maxWaterDepth": 283,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:stairs_ancient_tile": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stairs_arcane": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stairs_arcane_brick": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stairs_eldritch": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stairs_eldritch_rock": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stairs_eldritch_tile": {
+    "maxWaterDepth": 152,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:stairs_greatwood": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "thaumaturge:stairs_silverwood": {
+    "maxWaterDepth": 44,
+    "implosionChance": 0.36137056
+  },
+  "thaumaturge:stone_ancient": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stone_ancient_doorway": {
+    "maxWaterDepth": 267,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:stone_ancient_glyphed": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stone_ancient_pillar": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stone_ancient_rock": {
+    "maxWaterDepth": 267,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:stone_ancient_tile": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stone_arcane": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stone_arcane_brick": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stone_arcane_pillar": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stone_eldritch_pillar": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:stone_eldritch_tile": {
+    "maxWaterDepth": 256,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:stone_porous": {
+    "maxWaterDepth": 62,
+    "implosionChance": 0.37082404
+  },
+  "thaumaturge:stripped_greatwood": {
+    "maxWaterDepth": 48,
+    "implosionChance": 0.32082406
+  },
+  "thaumaturge:stripped_log_greatwood": {
+    "maxWaterDepth": 48,
+    "implosionChance": 0.32082406
+  },
+  "thaumaturge:stripped_log_silverwood": {
+    "maxWaterDepth": 48,
+    "implosionChance": 0.32082406
+  },
+  "thaumaturge:stripped_silverwood": {
+    "maxWaterDepth": 48,
+    "implosionChance": 0.32082406
+  },
+  "thaumaturge:table_stone": {
+    "maxWaterDepth": 65,
+    "implosionChance": 0.3497237
+  },
+  "thaumaturge:table_wood": {
+    "maxWaterDepth": 41,
+    "implosionChance": 0.39013878
+  },
+  "thaumaturge:taint_crust": {
+    "maxWaterDepth": 130,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:taint_feature": {
+    "maxWaterDepth": 17,
+    "implosionChance": 0.585469
+  },
+  "thaumaturge:taint_fibre": {
+    "maxWaterDepth": 29,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:taint_geyser": {
+    "maxWaterDepth": 130,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:taint_log": {
+    "maxWaterDepth": 88,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:taint_rock": {
+    "maxWaterDepth": 130,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:taint_soil": {
+    "maxWaterDepth": 130,
+    "implosionChance": 0.05
+  },
+  "thaumaturge:taint_spore_stalk": {
+    "maxWaterDepth": 21,
+    "implosionChance": 0.5463528
+  },
+  "thaumaturge:tallow_block": {
+    "maxWaterDepth": 23,
+    "implosionChance": 0.5344535
+  },
+  "thaumaturge:thaumatorium": {
+    "maxWaterDepth": 103,
+    "implosionChance": 0.14554776
+  },
+  "thaumaturge:thaumatorium_top": {
+    "maxWaterDepth": 103,
+    "implosionChance": 0.14554776
+  },
+  "thaumaturge:trapdoor_greatwood": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.31137055
+  },
+  "thaumaturge:trapdoor_silverwood": {
+    "maxWaterDepth": 49,
+    "implosionChance": 0.31137055
+  },
+  "thaumaturge:tube": {
+    "maxWaterDepth": 63,
+    "implosionChance": 0.39582404
+  },
+  "thaumaturge:tube_buffer": {
+    "maxWaterDepth": 63,
+    "implosionChance": 0.39582404
+  },
+  "thaumaturge:tube_filter": {
+    "maxWaterDepth": 63,
+    "implosionChance": 0.39582404
+  },
+  "thaumaturge:tube_oneway": {
+    "maxWaterDepth": 63,
+    "implosionChance": 0.39582404
+  },
+  "thaumaturge:tube_restrict": {
+    "maxWaterDepth": 63,
+    "implosionChance": 0.39582404
+  },
+  "thaumaturge:tube_valve": {
+    "maxWaterDepth": 63,
+    "implosionChance": 0.39582404
+  },
+  "thaumaturge:vis_battery": {
+    "maxWaterDepth": 30,
+    "implosionChance": 0.5344535
+  },
+  "thaumaturge:vis_generator": {
+    "maxWaterDepth": 37,
+    "implosionChance": 0.43337092
+  },
+  "thaumaturge:vis_relay": {
+    "maxWaterDepth": 35,
+    "implosionChance": 0.43337092
+  },
+  "thaumaturge:vishroom": {
+    "maxWaterDepth": 15,
+    "implosionChance": 0.6
+  },
+  "thaumaturge:void_siphon": {
+    "maxWaterDepth": 103,
+    "implosionChance": 0.14554776
+  },
+  "thaumaturge:wall_ancient": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:wall_ancient_rock": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:wall_ancient_tile": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:wall_arcane_brick": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:wall_arcane_stone": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:wall_banner_black": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_blue": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_brown": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_crimson_cult": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_cyan": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_gray": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_green": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_light_blue": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_light_gray": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_lime": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_magenta": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_orange": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_pink": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_purple": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_red": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_white": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_banner_yellow": {
+    "maxWaterDepth": 32,
+    "implosionChance": 0.4806853
+  },
+  "thaumaturge:wall_eldritch_rock": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:wall_eldritch_stone": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:wall_eldritch_tile": {
+    "maxWaterDepth": 79,
+    "implosionChance": 0.26021048
+  },
+  "thaumaturge:warded_glass": {
+    "maxWaterDepth": 28,
+    "implosionChance": 0.55876356
   },
   "the_bumblezone:ancient_wax_bricks": {
     "maxWaterDepth": 100,

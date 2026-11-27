@@ -6,8 +6,8 @@
     "animal_owner": true,
     "harvest_tool.effective_tool": true,
     "energy_storage.style": "PROGRESS_BAR",
-    "item_storage.normal_amount": 9,
     "item_storage": true,
+    "item_storage.normal_amount": 9,
     "harvest_tool": true,
     "armor_stand": true,
     "fluid_storage.detailed": false,
@@ -62,6 +62,41 @@
   "create_aeronautics_automated_logistics": {
     "logistics_identity": true
   },
+  "thaumaturge": {
+    "display.everfull_urns": "GOGGLES",
+    "display.crystalizers": "GOGGLES",
+    "display.tubes": "GOGGLES",
+    "display.node_transducers": "GOGGLES",
+    "display.golem_builders": "GOGGLES",
+    "display.void_siphons": "GOGGLES",
+    "display.reservoirs": "GOGGLES",
+    "display.focal_manipulators": "GOGGLES",
+    "display.flux_scrubbers": "GOGGLES",
+    "display.valves": "GOGGLES",
+    "display.crucibles": "GOGGLES",
+    "display.one_way_tubes": "GOGGLES",
+    "display.centrifuges": "GOGGLES",
+    "display.restricted_tubes": "GOGGLES",
+    "display.brain_jars": "GOGGLES",
+    "display.smelters": "GOGGLES",
+    "display.mirrors": "GOGGLES",
+    "display": true,
+    "display.nodes": "GOGGLES",
+    "display.advanced_alchemical_furnaces": "GOGGLES",
+    "display.thaumatoriums": "GOGGLES",
+    "display.jars": "GOGGLES",
+    "display.essentia_mirrors": "GOGGLES",
+    "display.vis_relays": "GOGGLES",
+    "display.spas": "GOGGLES",
+    "display.buffers": "GOGGLES",
+    "display.filter_tubes": "GOGGLES",
+    "display.alembics": "GOGGLES",
+    "display.infernal_furnaces": "GOGGLES",
+    "display.golems": "GOGGLES",
+    "display.potion_sprayers": "GOGGLES",
+    "display.deconstruction_tables": "GOGGLES",
+    "machine_icon": true
+  },
   "jade": {
     "coordinates.rel": false,
     "registry_name.special": false,
@@ -77,14 +112,14 @@
     "overclock": true,
     "pipe": true
   },
-  "ars_zero": {
-    "entity_mana": true
-  },
   "underlay": {
     "overlay": true
   },
   "delighto_flight": {
     "crop_progress": true
+  },
+  "ars_zero": {
+    "entity_mana": true
   },
   "balm": {
     "jade": true

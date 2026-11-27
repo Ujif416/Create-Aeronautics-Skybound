@@ -1,0 +1,103 @@
+{
+  "totalPatsCounter": {
+    "pats": 820
+  },
+  "entities": {
+    "minecraft:skeleton": {
+      "pats": 10
+    },
+    "eternal_starlight:aurora_deer": {
+      "pats": 28
+    },
+    "ars_nouveau:starbuncle": {
+      "pats": 24
+    },
+    "creeperoverhaul:snowy_creeper": {
+      "pats": 6
+    },
+    "naturalist:butterfly": {
+      "pats": 22
+    },
+    "zombie_variants:cave_zombie": {
+      "pats": 31
+    },
+    "minecraft:glow_squid": {
+      "pats": 4
+    },
+    "minecraft:happy_ghast": {
+      "pats": 51
+    },
+    "minecraft:cow": {
+      "pats": 132
+    },
+    "minecraft:spider": {
+      "pats": 3
+    },
+    "goblintraders:goblin_trader": {
+      "pats": 193
+    },
+    "ars_nouveau:drygmy": {
+      "pats": 9
+    },
+    "minecraft:horse": {
+      "pats": 34
+    },
+    "golemoverhaul:slime_golem": {
+      "pats": 30
+    },
+    "eternal_starlight:ratlin": {
+      "pats": 11
+    },
+    "eternal_starlight:seeker": {
+      "pats": 11
+    },
+    "creeperoverhaul:cave_creeper": {
+      "pats": 2
+    },
+    "ars_nouveau:amethyst_golem": {
+      "pats": 4
+    },
+    "minecraft:player": {
+      "pats": 66
+    },
+    "crittersandcompanions:otter": {
+      "pats": 1
+    },
+    "eternal_starlight:tiny_creteor": {
+      "pats": 1
+    },
+    "eternal_starlight:creteor": {
+      "pats": 14
+    },
+    "minecraft:allay": {
+      "pats": 8
+    },
+    "minecraft:sheep": {
+      "pats": 9
+    },
+    "eternal_starlight:crystallized_moth": {
+      "pats": 0
+    },
+    "mutantmonsters:creeper_minion": {
+      "pats": 12
+    },
+    "naturalist:rat": {
+      "pats": 11
+    },
+    "naturalist:mammoth": {
+      "pats": 28
+    },
+    "minecraft:enderman": {
+      "pats": 5
+    },
+    "minecraft:chicken": {
+      "pats": 24
+    },
+    "minecraft:zombie": {
+      "pats": 3
+    },
+    "eternal_starlight:nightfall_spider": {
+      "pats": 1
+    }
+  }
+}

@@ -6,9 +6,9 @@ chunk_rebuild_scheduler = "culling"
 
 [adaptive_ticking]
 	# How far away (in chunks) until light sources get ticked less often.
-	slow = 5
+	slow = 3
 	# How far away (in chunks) until light sources get ticked even less often.
-	slower = 8
+	slower = 6
 	# Reduces how often sources behind the camera get ticked.
 	background_sleep = true
 
@@ -43,8 +43,8 @@ chunk_rebuild_scheduler = "culling"
 				spider = true
 				skeleton = true
 				fox = true
-				item = true
-				experience_orb = true
+				item = false
+				experience_orb = false
 				slime = true
 				zombie_villager = true
 				firework_rocket = true

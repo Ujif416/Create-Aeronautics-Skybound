@@ -1,3 +1,2 @@
-// Visit the wiki for more info - https://kubejs.com/
-console.info('Hello, World! (Loaded client example script)')
-
+// Arcanum & Machina — Client Script (MC 1.21.1 / NeoForge)
+console.info('[Arcanum & Machina] Клиентские скрипты загружены.');

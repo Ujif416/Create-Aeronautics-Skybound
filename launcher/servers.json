@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogRevision": "arcanum-2026-11-28.4",
+  "catalogRevision": "arcanum-2026-11-28.5",
   "servers": [
     {
       "id": "create-skybound",
@@ -47,11 +47,11 @@
         "version": "21.1.266"
       },
       "java": 21,
-      "packRevision": "arcanum-2026-11-28.4",
+      "packRevision": "arcanum-2026-11-28.5",
       "pack": {
         "repository": "Ujif416/Create-Aeronautics-Skybound",
-        "commit": "70a8ab92d98eb5bf2cea5b30f8b90c58ac857d80",
-        "indexSha256": "62413d3266ca4186f5002550cd891fd87f158ecbeefdde97bdb3720860e3ccb5",
+        "commit": "e5a1f5562ce37ee0219ae8bd17952f1a128a9e21",
+        "indexSha256": "e92387ebaa14693e5c42c76e6c6b58f31a9f772ca6da6e487eb55a12bbc082ff",
         "exclude": []
       }
     }

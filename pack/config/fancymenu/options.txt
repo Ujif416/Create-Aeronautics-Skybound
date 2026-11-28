@@ -1,0 +1,65 @@
+##[general]
+
+I:default_gui_scale = '-1';
+B:force_fullscreen = 'false';
+B:play_vanilla_menu_music = 'true';
+
+
+##[customization]
+
+B:modpack_mode = 'false';
+B:show_customization_overlay = 'false';
+B:advanced_customization_mode = 'false';
+
+
+##[loading]
+
+B:game_intro_fade_out = 'true';
+S:game_intro_sound_channel = 'master';
+S:preload_resources = '';
+B:allow_game_intro_skip = 'true';
+S:game_intro_animation_name = '';
+F:game_intro_volume = '1.0';
+S:custom_game_intro_skip_text = '';
+
+
+##[window]
+
+B:show_custom_window_icon = 'true';
+S:custom_window_icon_macos = '';
+S:custom_window_icon_32 = '/config/fancymenu/assets/arcanum/icon_32.png';
+S:custom_window_title = 'Arcanum & Machina — Маги и Техники | Minecraft 1.21.1';
+S:custom_window_icon_16 = '/config/fancymenu/assets/arcanum/icon_16.png';
+
+
+##[global_customizations]
+
+B:seamless_world_loading = 'false';
+
+
+##[multiplayer_screen]
+
+B:show_multiplayer_screen_server_icons = 'true';
+
+
+##[singleplayer_screen]
+
+B:show_singleplayer_screen_world_icons = 'true';
+
+
+##[ui]
+
+B:enable_ui_animations = 'true';
+S:ui_scale_v2 = 'auto';
+S:ui_theme = 'dark';
+B:play_ui_click_sounds = 'true';
+
+
+##[debug_overlay]
+
+B:show_debug_overlay = 'false';
+
+
+##[tutorial]
+
+B:show_welcome_screen = 'false';

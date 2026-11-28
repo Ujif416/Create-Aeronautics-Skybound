@@ -1,10 +1,9 @@
 {
-  "schemaVersion": 1,
   "name": "Arcanum & Machina",
-  "version": "1.0.0",
   "minecraft": "1.21.1",
   "loader": "neoforge",
   "loaderVersion": "21.1.266",
+  "java": 21,
   "files": [
     {
       "path": "config/accessories.json5",
@@ -3107,6 +3106,11 @@
       "sha256": "d4b5be9352fe358cf519637b4a0fe68cbc9ba0452bc992b8ebb473223dab8e92"
     },
     {
+      "path": "config/drippyloadingscreen/options.txt",
+      "size": 688,
+      "sha256": "fc7644677f2a4c4ebd91341e20abc76845a6cab407a95f98f941b1ca3227298d"
+    },
+    {
       "path": "config/dummmmmmy-client.toml",
       "size": 1580,
       "sha256": "6db04f2307549c34150964f6adb8cf00d8b9a98fbb053987e50c4d5ee440690a"
@@ -3265,6 +3269,126 @@
       "path": "config/fallingtrees/common.json",
       "size": 1462,
       "sha256": "649e02ba14da1519b6abbcf7a65ffd231360fe94c0dca8953cbf3e394bc7bf5b"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/bar_bg.png",
+      "size": 4732,
+      "sha256": "573da1b5a2dec28c86d4a5453408e6d906198db26563e1794bada22a05afcaa6"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/bar_fill.png",
+      "size": 3498,
+      "sha256": "846ae0441f184d31532641af4fa4d2e29cf14dbb4b9674748927359924ce60cb"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/btn_mods_hover.png",
+      "size": 6222,
+      "sha256": "0cabe348f27a819c029cd01f2853b86924b047e4526398b5f606134c341f9637"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/btn_mods.png",
+      "size": 5468,
+      "sha256": "9d57d7477442b13acf0c930a1208faa48990eac0a23b6adb74e83c4811d8d32d"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/btn_multiplayer_hover.png",
+      "size": 12215,
+      "sha256": "a519d05091f864c020c6ba587007a4e1419005859cb06d95f6251525a192adcb"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/btn_multiplayer.png",
+      "size": 7394,
+      "sha256": "77eb6940556b8bf37d687f3eb7a6744f787de05495ab18c86127afc67ec75440"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/btn_options_hover.png",
+      "size": 7215,
+      "sha256": "22e7478d497674653ffb4bc19c74dca51b5f628a0cb388a4b65a3b0ccd4d52b5"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/btn_options.png",
+      "size": 6184,
+      "sha256": "728327af70950f038131e377e201d17df0319495ca86ed6bbc85736271fcba73"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/btn_quit_hover.png",
+      "size": 7100,
+      "sha256": "23cace24ac82dbc1f70e66766f34f1a8bd708cdfecc901a67be343da6486cda1"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/btn_quit.png",
+      "size": 5432,
+      "sha256": "255978861820d397d4dd649bc29e2698e1c8e3a0ef7109f222a73c686318338f"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/btn_server_hover.png",
+      "size": 11314,
+      "sha256": "c2097c0088bfc2a49532c88795b0d9cbdbf4e540a3a099332dd97b011c965945"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/btn_server.png",
+      "size": 12238,
+      "sha256": "948a5b72c405cfb37fe0e99be88f7562cd6024ff98c4315fdb3abf81870381f6"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/btn_singleplayer_hover.png",
+      "size": 11958,
+      "sha256": "6b1085334ae6cbc0bba177a3a01d47751ea030cee1434d2e07822fa50aa8fe13"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/btn_singleplayer.png",
+      "size": 7373,
+      "sha256": "39a2f823b6312ba75635dec85ee2e33cda6a61d3b41ffac1416e7855086bf4b8"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/icon_16.png",
+      "size": 1051,
+      "sha256": "c4ee645355c2dc16b7afc7c51cc39b2b0ff5330fa94a41b80e64bbc041549940"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/icon_32.png",
+      "size": 3423,
+      "sha256": "019aef91098e94576618ff598e6559e5f96b4dd9063724f449d176a98c388299"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/loading_bg.png",
+      "size": 4088806,
+      "sha256": "59609e0cde25f699c79578cc65594fec15ad78bfce672a1441a88d237817da46"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/logo_loading.png",
+      "size": 86045,
+      "sha256": "645c033b1e267735d27392440bad06a3231f54fb350acc9d19b7d466702027e3"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/logo_menu.png",
+      "size": 76128,
+      "sha256": "b2558ccb737dca9edeb2bf44db8701ae1c643f0206e8b1661b14725b2e5db735"
+    },
+    {
+      "path": "config/fancymenu/assets/arcanum/menu_bg.png",
+      "size": 4299484,
+      "sha256": "4fa41b582c511228d9d8e0a275b740094c0f906fd45c65d0523aae794b1ac32b"
+    },
+    {
+      "path": "config/fancymenu/customizablemenus.txt",
+      "size": 148,
+      "sha256": "070c2b267eb3b627dec3bd793b84d326d1b689457a741945eba43d50292eebb0"
+    },
+    {
+      "path": "config/fancymenu/customization/fm_arcanum_loading.txt",
+      "size": 5176,
+      "sha256": "ad3a92c4b01f70afd2a060e3f9364c1339cfa503b4d313acfd4a12de14de4151"
+    },
+    {
+      "path": "config/fancymenu/customization/fm_arcanum_title.txt",
+      "size": 15000,
+      "sha256": "f749a056dda71a5cc9178615b78c6bbda1bcb6c24054f3d8d3cdb4fcce4f071e"
+    },
+    {
+      "path": "config/fancymenu/options.txt",
+      "size": 1245,
+      "sha256": "9647ac3e724f6e4091d47b77f276fe133f87315f489b916e5d72a33b3d5e913d"
     },
     {
       "path": "config/fancytoasts/general.json",
@@ -3695,6 +3819,11 @@
       "path": "config/lithostitched.json",
       "size": 273,
       "sha256": "ce8ab190281862b0554c92043c2bf8af106fbe4116bcd6dab433f6506781dbc0"
+    },
+    {
+      "path": "config/loadingbackgrounds.json",
+      "size": 130,
+      "sha256": "f8164f9a2fb371910c0d801cc5059e0e8c31fa2ef79a350b340f5b09d9c0d7d0"
     },
     {
       "path": "config/lodestone-client.toml",
@@ -4893,8 +5022,8 @@
     },
     {
       "path": "kubejs/server_scripts/01_factions_and_islands.js",
-      "size": 53325,
-      "sha256": "515494d7df978a488cfc4ceaf6c9f827708ce5274b9fbb1f0f387da7501641ef"
+      "size": 63257,
+      "sha256": "6306d127596488ed3015380b51ae793c76bb7ead16eaed5643bd09fdc9aecc5f"
     },
     {
       "path": "kubejs/startup_scripts/main.js",
@@ -5262,11 +5391,6 @@
       "sha256": "d72f235cf1f56f2c374f52c00bdda5034524b28142305a84cfc123a3f92ad274"
     },
     {
-      "path": "mods/CinematicInteraction-NeoForge-1.21.1-0.18.2.jar",
-      "size": 1009597,
-      "sha256": "e7b516f510959f4f249d75445cc46d44a6cc12332bedcbe1d3ded9f89a16d304"
-    },
-    {
       "path": "mods/cleanswing-1.9.jar",
       "size": 8449,
       "sha256": "b86e69372a3451a09c1b5d09d69f2e20485c6d2aa62fa8a538ef77509a5f5595"
@@ -5570,6 +5694,11 @@
       "path": "mods/doubledoors-1.21.1-7.5.jar",
       "size": 71436,
       "sha256": "378216c5b294d66975c8e1cbe01bb814af0f61426e9d3e515f535810a20e08e5"
+    },
+    {
+      "path": "mods/drippyloadingscreen_neoforge_3.1.5_MC_1.21.1.jar",
+      "size": 168632,
+      "sha256": "f1fcb6cf3cbc7a6055fed0912bf284a7c455a0830de42460943fc5e130072759"
     },
     {
       "path": "mods/dummmmmmy-1.21-2.1.2-neoforge.jar",
@@ -7005,6 +7134,11 @@
       "path": "resourcepacks/Animated Spawn Eggs - MC 1.21.1 - 1.0.0.zip",
       "size": 610716,
       "sha256": "f641d060817ca633818a43149d51401971bd92d5036f132ffdd21fee9a262146"
+    },
+    {
+      "path": "resourcepacks/arcanum_machina_loading_backgrounds.zip",
+      "size": 8342096,
+      "sha256": "3140f2b782ee7bcca2b0b7cbe11575633bba2204c36920ce26338087f12a8276"
     },
     {
       "path": "resourcepacks/Better Vanilla GUI (Without OptiGUI) - MC 1.21.1 - 4.0.0.zip",

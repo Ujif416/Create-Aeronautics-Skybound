@@ -1,0 +1,16 @@
+##[general]
+
+B:allow_universal_layouts = 'false';
+B:early_fade_out_elements = 'true';
+B:wait_for_textures_in_loading = 'true';
+B:fade_out_loading_screen = 'true';
+
+
+##[early_loading]
+
+S:early_loading_background_texture_path = '/config/fancymenu/assets/arcanum/loading_bg.png';
+B:early_loading_background_preserve_aspect_ratio = 'false';
+S:early_loading_logo_texture_path = '/config/fancymenu/assets/arcanum/logo_loading.png';
+S:early_loading_bar_background_texture_path = '/config/fancymenu/assets/arcanum/bar_bg.png';
+S:early_loading_bar_progress_texture_path = '/config/fancymenu/assets/arcanum/bar_fill.png';
+S:early_loading_window_title = 'Arcanum & Machina — Загрузка...';

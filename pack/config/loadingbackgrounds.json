@@ -1,0 +1,7 @@
+{
+  "secondsStay": 6.0,
+  "secondsFade": 0.6,
+  "brightness": 0.94,
+  "position": "BOTTOM_RIGHT",
+  "shouldLoadResources": true
+}

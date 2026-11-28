@@ -1,0 +1,167 @@
+type = fancymenu_layout
+
+layout-meta {
+  identifier = drippy_loading_overlay
+  render_custom_elements_behind_vanilla = false
+  last_edited_time = 1795853000000
+  is_enabled = true
+  randommode = false
+  randomgroup = 1
+  randomonlyfirsttime = false
+  layout_index = 0
+  [loading_requirement_container_meta:a1100001-0000-4000-8000-000000000001-1795853000000] = [groups:][instances:]
+}
+
+customization {
+  action = setscale
+  scale = 3.0
+}
+
+customization {
+  action = autoscale
+  basewidth = 1920
+  baseheight = 1080
+}
+
+menu_background {
+  instance_identifier = a1100002-0000-4000-8000-000000000002-1795853000000
+  background_type = image
+  show_background = true
+  image_path = [source:local]/config/fancymenu/assets/arcanum/loading_bg.png
+  slide = false
+  repeat_texture = false
+  parallax = false
+  parallax_intensity_x = 0.02
+  parallax_intensity_y = 0.02
+  invert_parallax = false
+  restart_animated_on_menu_load = false
+}
+
+customization {
+  action = backgroundoptions
+  keepaspectratio = false
+}
+
+layout_action_executable_blocks {
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = a1100003-0000-4000-8000-000000000003-1795853000000
+  [executable_block:a1100003-0000-4000-8000-000000000003-1795853000000][type:generic] = [executables:]
+  element_type = vanilla_button
+  instance_identifier = mojang_logo
+  anchor_point = vanilla
+  x = 0
+  y = 0
+  width = 240
+  height = 60
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = a1100004-0000-4000-8000-000000000004-1795853000000
+  [loading_requirement_container_meta:a1100004-0000-4000-8000-000000000004-1795853000000] = [groups:][instances:]
+  is_hidden = true
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = a1100005-0000-4000-8000-000000000005-1795853000000
+  [executable_block:a1100005-0000-4000-8000-000000000005-1795853000000][type:generic] = [executables:]
+  element_type = vanilla_button
+  instance_identifier = progress_bar
+  anchor_point = vanilla
+  x = 0
+  y = 0
+  width = 240
+  height = 10
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = a1100006-0000-4000-8000-000000000006-1795853000000
+  [loading_requirement_container_meta:a1100006-0000-4000-8000-000000000006-1795853000000] = [groups:][instances:]
+  is_hidden = true
+}
+
+element {
+  source = [source:local]/config/fancymenu/assets/arcanum/logo_loading.png
+  repeat_texture = false
+  nine_slice_texture = false
+  nine_slice_texture_border_x = 5
+  nine_slice_texture_border_y = 5
+  image_tint = #FFFFFF
+  element_type = image
+  instance_identifier = a1100007-0000-4000-8000-000000000007-1795853000000
+  appearance_delay = no_delay
+  disappearance_delay = no_delay
+  fade_in_v2 = no_fading
+  fade_out = no_fading
+  auto_sizing = false
+  sticky_anchor = false
+  anchor_point = mid-centered
+  x = -168
+  y = -62
+  width = 336
+  height = 84
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = a1100008-0000-4000-8000-000000000008-1795853000000
+  [loading_requirement_container_meta:a1100008-0000-4000-8000-000000000008-1795853000000] = [groups:][instances:]
+  base_opacity = 1.0
+}
+
+element {
+  bar_color = #FFFFFFFF
+  bar_texture = [source:local]/config/fancymenu/assets/arcanum/bar_fill.png
+  bar_nine_slice = false
+  background_color = #FFFFFFFF
+  background_texture = [source:local]/config/fancymenu/assets/arcanum/bar_bg.png
+  background_nine_slice = false
+  direction = right
+  progress_for_element_anchor = false
+  progress_source = {"placeholder":"drippy_gl_percent"}
+  value_mode = percentage
+  smooth_filling_animation = true
+  element_type = progress_bar
+  instance_identifier = a1100009-0000-4000-8000-000000000009-1795853000000
+  appearance_delay = no_delay
+  disappearance_delay = no_delay
+  fade_in_v2 = no_fading
+  fade_out = no_fading
+  auto_sizing = false
+  sticky_anchor = false
+  anchor_point = bottom-centered
+  x = -190
+  y = -50
+  width = 380
+  height = 15
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = a1100010-0000-4000-8000-000000000010-1795853000000
+  [loading_requirement_container_meta:a1100010-0000-4000-8000-000000000010-1795853000000] = [groups:][instances:]
+  base_opacity = 1.0
+}
+
+element {
+  interactable = false
+  source = ^^^%n%§d✦ §fПробуждение мира Арканы и Механики… §e{"placeholder":"drippy_gl_percent"}% §6⚙%n%^^^
+  source_mode = direct
+  shadow = true
+  scale = 1.0
+  base_color = #F4EEFF
+  text_border = 2
+  line_spacing = 2
+  enable_scrolling = false
+  auto_line_wrapping = false
+  remove_html_breaks = true
+  parse_markdown = true
+  element_type = text_v2
+  instance_identifier = a1100011-0000-4000-8000-000000000011-1795853000000
+  appearance_delay = no_delay
+  disappearance_delay = no_delay
+  fade_in_v2 = no_fading
+  fade_out = no_fading
+  auto_sizing = false
+  sticky_anchor = false
+  anchor_point = bottom-centered
+  x = -190
+  y = -70
+  width = 380
+  height = 18
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = a1100012-0000-4000-8000-000000000012-1795853000000
+  [loading_requirement_container_meta:a1100012-0000-4000-8000-000000000012-1795853000000] = [groups:][instances:]
+  base_opacity = 1.0
+}

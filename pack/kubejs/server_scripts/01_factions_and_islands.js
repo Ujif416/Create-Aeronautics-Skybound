@@ -1079,10 +1079,15 @@ function grantStarterKit(player, faction) {
   }
 }
 
-function openFactionSelectionGUI(player) {
+function openFactionSelectionGUI(player, forceAllowChange) {
   if (!player) return;
+  if (forceAllowChange) {
+    player.persistentData.putBoolean('allowFactionChange', true);
+  }
   var counts = getIslandCounts(player.server);
-  var curFaction = getPlayerFaction(player);
+  var curFaction = (forceAllowChange || player.persistentData.getBoolean('allowFactionChange'))
+    ? 'none'
+    : getPlayerFaction(player);
   if (ArcanumUiMod) {
     ArcanumUiMod.openForPlayer(
       player,
@@ -1219,12 +1224,212 @@ PlayerEvents.respawned(function(event) {
 
 // ---------- 6. ПУБЛИЧНЫЕ И АДМИНСКИЕ КОМАНДЫ ----------
 
+function formatFactionBadge(faction) {
+  if (faction === 'mage') return '§d✦ Путь Арканы (Маг)';
+  if (faction === 'tech') return '§6⚙ Путь Механики (Техник)';
+  return '§7○ Не выбрана (Нейтральный остров)';
+}
+
+function getOnlineSideSummary(server) {
+  var mages = [];
+  var techs = [];
+  var neutrals = [];
+  var list = server.players;
+  for (var i = 0; i < list.size(); i++) {
+    var p = list.get(i);
+    var f = getPlayerFaction(p);
+    if (f === 'mage') mages.push('' + p.username);
+    else if (f === 'tech') techs.push('' + p.username);
+    else neutrals.push('' + p.username);
+  }
+  return { mages: mages, techs: techs, neutrals: neutrals };
+}
+
+function tellResponder(responder, msg) {
+  if (!responder) return;
+  if (typeof responder.tell === 'function') {
+    responder.tell(Text.of(msg));
+  } else if (typeof responder.respond === 'function') {
+    responder.respond(Text.of(msg));
+  } else if (typeof responder.sendSuccess === 'function') {
+    responder.sendSuccess(function() { return Text.of(msg); }, false);
+  }
+}
+
+function inspectPlayerSide(responder, server, targetPlayer) {
+  if (!targetPlayer) {
+    tellResponder(responder, '§cИгрок не найден в сети.');
+    return 0;
+  }
+  var faction = getPlayerFaction(targetPlayer);
+  var homeKey = '' + (targetPlayer.persistentData.getString('homeIsland') || '');
+  var homeTitle = (homeKey && ISLAND_DEFS[homeKey]) ? ISLAND_DEFS[homeKey].title : 'Нейтральный Остров Равновесия';
+  var store = getIslandsStore(server);
+  var coordsText = '';
+  if (homeKey && store.contains(homeKey)) {
+    var s = store.getCompound(homeKey);
+    coordsText = ' §8[' + s.getInt('x') + ', ' + s.getInt('y') + ', ' + s.getInt('z') + ']';
+  }
+  var summary = getOnlineSideSummary(server);
+
+  tellResponder(responder, '§8------------------------------------------------');
+  tellResponder(responder, '§fИгрок: §e' + targetPlayer.username + ' §8| §fСторона: ' + formatFactionBadge(faction));
+  tellResponder(responder, '§7Домашний остров: §f' + homeTitle + coordsText);
+  tellResponder(responder, '§7Баланс онлайн: §d✦ Маги: ' + summary.mages.length + ' §8| §6⚙ Техники: ' + summary.techs.length + (summary.neutrals.length > 0 ? ' §8| §7Выбирают: ' + summary.neutrals.length : ''));
+  tellResponder(responder, '§8------------------------------------------------');
+  return 1;
+}
+
+function listAllOnlineSides(responder, server) {
+  var summary = getOnlineSideSummary(server);
+  tellResponder(responder, '§8================ §f✦ Стороны Онлайн ⚙ §8================');
+  tellResponder(responder, '§d✦ Маги (' + summary.mages.length + '): §f' + (summary.mages.length ? summary.mages.join(', ') : '§8нет в сети'));
+  tellResponder(responder, '§6⚙ Техники (' + summary.techs.length + '): §f' + (summary.techs.length ? summary.techs.join(', ') : '§8нет в сети'));
+  if (summary.neutrals.length > 0) {
+    tellResponder(responder, '§7○ Не выбрали (' + summary.neutrals.length + '): §f' + summary.neutrals.join(', '));
+  }
+  tellResponder(responder, '§8====================================================');
+  return 1;
+}
+
+function resetPlayerFactionState(server, target) {
+  target.stages.remove('faction_mage');
+  target.stages.remove('faction_tech');
+  target.stages.remove('island_mage1');
+  target.stages.remove('island_mage2');
+  target.stages.remove('island_tech1');
+  target.stages.remove('island_tech2');
+  target.persistentData.remove('homeIsland');
+  target.persistentData.putBoolean('allowFactionChange', true);
+  var neutralTarget = ensureIsland(server, 'neutral');
+  teleportToIsland(target, neutralTarget);
+  giveSelectorStarIfMissing(target);
+  sweepPlayerInventory(target);
+  openFactionSelectionGUI(target, true);
+}
+
+function adminApplySideChange(responder, server, target, rawChoice) {
+  if (!target) {
+    tellResponder(responder, '§cИгрок не найден в сети.');
+    return 0;
+  }
+  var choice = ('' + (rawChoice || '')).trim().toLowerCase();
+  if (choice === 'reset' || choice === 'none') {
+    resetPlayerFactionState(server, target);
+    target.tell(Text.of('§e✦ Оператор сбросил вашу сторону. Выберите новый путь в открывшемся меню!'));
+    tellResponder(responder, '§aСторона игрока §f' + target.username + ' §aсброшена, открыто меню выбора.');
+    return 1;
+  }
+  if (choice === 'menu' || choice === 'gui') {
+    openFactionSelectionGUI(target, true);
+    target.tell(Text.of('§e✦ Оператор открыл вам меню смены стороны и острова!'));
+    tellResponder(responder, '§aИгроку §f' + target.username + ' §aоткрыто меню выбора стороны.');
+    return 1;
+  }
+  if (choice !== 'mage' && choice !== 'tech' && !VALID_FACTION_ISLANDS[choice]) {
+    tellResponder(responder, '§cУкажите: mage, tech, mage1, mage2, tech1, tech2, menu или reset');
+    return 0;
+  }
+  assignPlayerPath(target, choice, true);
+  tellResponder(responder, '§aИгроку §f' + target.username + ' §aустановлена сторона: ' + formatFactionBadge(getPlayerFaction(target)) + ' §7(' + target.persistentData.getString('homeIsland') + ').');
+  return 1;
+}
+
+// Brigadier-регистрация с автодополнением по Tab: /side, /sides, /sidemenu, /setside
+ServerEvents.commandRegistry(function(event) {
+  var Commands = event.commands;
+  var Arguments = event.arguments;
+
+  // 1) /side [ник] — доступно всем игрокам (проверка своей или чужой стороны)
+  event.register(
+    Commands.literal('side')
+      .executes(function(ctx) {
+        var src = ctx.source;
+        var srv = src.server;
+        var selfPlayer = src.player;
+        if (!selfPlayer) return listAllOnlineSides(src, srv);
+        return inspectPlayerSide(selfPlayer, srv, selfPlayer);
+      })
+      .then(
+        Commands.literal('list').executes(function(ctx) {
+          var src = ctx.source;
+          return listAllOnlineSides(src.player || src, src.server);
+        })
+      )
+      .then(
+        Commands.argument('player', Arguments.PLAYER.create(event))
+          .executes(function(ctx) {
+            var src = ctx.source;
+            var target = Arguments.PLAYER.getResult(ctx, 'player');
+            return inspectPlayerSide(src.player || src, src.server, target);
+          })
+      )
+  );
+
+  // 2) /sides — сводка всех онлайн-игроков по сторонам (доступно всем)
+  event.register(
+    Commands.literal('sides')
+      .executes(function(ctx) {
+        var src = ctx.source;
+        return listAllOnlineSides(src.player || src, src.server);
+      })
+  );
+
+  // 3) /sidemenu [ник] — для операторов: открыть игроку меню выбора/смены стороны
+  event.register(
+    Commands.literal('sidemenu')
+      .requires(function(src) { return src.hasPermission(2); })
+      .executes(function(ctx) {
+        var src = ctx.source;
+        var selfPlayer = src.player;
+        if (!selfPlayer) {
+          tellResponder(src, '§cУкажите ник игрока: /sidemenu <ник>');
+          return 0;
+        }
+        openFactionSelectionGUI(selfPlayer, true);
+        tellResponder(selfPlayer, '§aОткрыто меню смены стороны и острова.');
+        return 1;
+      })
+      .then(
+        Commands.argument('player', Arguments.PLAYER.create(event))
+          .executes(function(ctx) {
+            var src = ctx.source;
+            var target = Arguments.PLAYER.getResult(ctx, 'player');
+            openFactionSelectionGUI(target, true);
+            target.tell(Text.of('§e✦ Оператор открыл вам меню смены Пути и Острова!'));
+            tellResponder(src.player || src, '§aИгроку §f' + target.username + ' §aоткрыто меню выбора/смены стороны.');
+            return 1;
+          })
+      )
+  );
+
+  // 4) /setside <ник> <mage|tech|mage1|mage2|tech1|tech2|menu|reset> — для операторов
+  var sideChoices = ['mage', 'tech', 'mage1', 'mage2', 'tech1', 'tech2', 'menu', 'reset'];
+  var playerArgNode = Commands.argument('player', Arguments.PLAYER.create(event));
+  for (var ci = 0; ci < sideChoices.length; ci++) {
+    (function(choiceLiteral) {
+      playerArgNode = playerArgNode.then(
+        Commands.literal(choiceLiteral).executes(function(ctx) {
+          var src = ctx.source;
+          var target = Arguments.PLAYER.getResult(ctx, 'player');
+          return adminApplySideChange(src.player || src, src.server, target, choiceLiteral);
+        })
+      );
+    })(sideChoices[ci]);
+  }
+  event.register(
+    Commands.literal('setside')
+      .requires(function(src) { return src.hasPermission(2); })
+      .then(playerArgNode)
+  );
+});
+
 ServerEvents.basicPublicCommand('choose_path', function(event) {
   var player = event.player;
   if (!player) return;
   var arg = ('' + (event.input || '')).trim().toLowerCase();
   if (!arg || arg === 'menu' || arg === 'gui') {
-    openFactionSelectionGUI(player);
+    openFactionSelectionGUI(player, false);
     return;
   }
   assignPlayerPath(player, arg, false);
@@ -1237,7 +1442,7 @@ ServerEvents.basicPublicCommand('island_home', function(event) {
   if (faction === 'none') {
     var neutral = ensureIsland(player.server, 'neutral');
     teleportToIsland(player, neutral);
-    openFactionSelectionGUI(player);
+    openFactionSelectionGUI(player, false);
     return;
   }
   var now = Date.now();
@@ -1264,13 +1469,41 @@ ServerEvents.basicCommand('arcanum', function(event) {
   // Вызывается сетевым пакетом кастомного полноэкранного UI (ArcanumUiMod) при клике по карточке острова
   if (sub === 'selfselect' && sender) {
     var picked = (parts[1] || '').toLowerCase();
-    assignPlayerPath(sender, picked, false);
+    var canChange = sender.persistentData.getBoolean('allowFactionChange');
+    if (canChange) {
+      sender.persistentData.remove('allowFactionChange');
+    }
+    assignPlayerPath(sender, picked, canChange);
     return;
   }
 
   // Вызывается сетевым пакетом кастомного UI при нажатии горячей клавиши H
   if (sub === 'openui_self' && sender) {
-    openFactionSelectionGUI(sender);
+    openFactionSelectionGUI(sender, false);
+    return;
+  }
+
+  if (sub === 'check' || sub === 'whois') {
+    var checkName = parts[1];
+    var checkTarget = checkName ? server.getPlayer(checkName) : sender;
+    if (!checkTarget) {
+      listAllOnlineSides(sender || event, server);
+      return;
+    }
+    inspectPlayerSide(sender || event, server, checkTarget);
+    return;
+  }
+
+  if (sub === 'menu') {
+    var menuName = parts[1];
+    var menuTarget = menuName ? server.getPlayer(menuName) : sender;
+    if (!menuTarget) {
+      event.respond(Text.of('§cИгрок не найден в сети. Использование: /arcanum menu <ник>'));
+      return;
+    }
+    openFactionSelectionGUI(menuTarget, true);
+    menuTarget.tell(Text.of('§e✦ Оператор открыл вам меню выбора/смены Пути и Острова!'));
+    event.respond(Text.of('§aИгроку ' + menuTarget.username + ' открыто меню выбора стороны.'));
     return;
   }
 
@@ -1344,32 +1577,20 @@ ServerEvents.basicCommand('arcanum', function(event) {
       event.respond(Text.of('§cИгрок не найден в сети.'));
       return;
     }
-    target.stages.remove('faction_mage');
-    target.stages.remove('faction_tech');
-    target.stages.remove('island_mage1');
-    target.stages.remove('island_mage2');
-    target.stages.remove('island_tech1');
-    target.stages.remove('island_tech2');
-    target.persistentData.remove('homeIsland');
-    var neutralTarget = ensureIsland(server, 'neutral');
-    teleportToIsland(target, neutralTarget);
-    giveSelectorStarIfMissing(target);
-    sweepPlayerInventory(target);
-    openFactionSelectionGUI(target);
+    resetPlayerFactionState(server, target);
     event.respond(Text.of('§aВыбор стороны игрока ' + target.username + ' сброшен. Игрок возвращён на Нейтральный остров.'));
     return;
   }
 
-  if (sub === 'setfaction') {
+  if (sub === 'setfaction' || sub === 'set') {
     var sfName = parts[1];
     var sfChoice = (parts[2] || '').toLowerCase();
     var sfTarget = server.getPlayer(sfName || '');
-    if (!sfTarget || !VALID_FACTION_ISLANDS[sfChoice]) {
-      event.respond(Text.of('§cИспользование: /arcanum setfaction <ник> <mage1|mage2|tech1|tech2>'));
+    if (!sfTarget || !sfChoice) {
+      event.respond(Text.of('§cИспользование: /arcanum setfaction <ник> <mage|tech|mage1|mage2|tech1|tech2|menu|reset>'));
       return;
     }
-    assignPlayerPath(sfTarget, sfChoice, true);
-    event.respond(Text.of('§aИгроку ' + sfTarget.username + ' назначен путь ' + sfChoice + '.'));
+    adminApplySideChange(sender || event, server, sfTarget, sfChoice);
     return;
   }
 
@@ -1385,5 +1606,5 @@ ServerEvents.basicCommand('arcanum', function(event) {
     return;
   }
 
-  event.respond(Text.of('§eКоманды: /arcanum status | tp <key> | setisland <key> | reset <player> | setfaction <player> <mage1|mage2|tech1|tech2> | testlock'));
+  event.respond(Text.of('§eКоманды: /side [ник] | /sides | /sidemenu <ник> | /setside <ник> <mage|tech|mage1|mage2|tech1|tech2|reset> | /arcanum status | tp <key> | setisland <key>'));
 });

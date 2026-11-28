@@ -1,0 +1,391 @@
+type = fancymenu_layout
+
+layout-meta {
+  identifier = title_screen
+  render_custom_elements_behind_vanilla = false
+  last_edited_time = 1795853000000
+  is_enabled = true
+  randommode = false
+  randomgroup = 1
+  randomonlyfirsttime = false
+  layout_index = 0
+  [loading_requirement_container_meta:b2200001-0000-4000-8000-000000000001-1795853000000] = [groups:][instances:]
+}
+
+customization {
+  action = setscale
+  scale = 3.0
+}
+
+customization {
+  action = autoscale
+  basewidth = 1920
+  baseheight = 1080
+}
+
+menu_background {
+  instance_identifier = b2200002-0000-4000-8000-000000000002-1795853000000
+  background_type = panorama
+  show_background = false
+}
+
+menu_background {
+  instance_identifier = b2200003-0000-4000-8000-000000000003-1795853000000
+  background_type = image
+  show_background = true
+  image_path = [source:local]/config/fancymenu/assets/arcanum/menu_bg.png
+  slide = false
+  repeat_texture = false
+  parallax = true
+  parallax_intensity_x = 0.015
+  parallax_intensity_y = 0.015
+  invert_parallax = false
+  restart_animated_on_menu_load = false
+}
+
+decoration_overlay {
+  overlay_type = fireflies
+  instance_identifier = b2200004-0000-4000-8000-000000000004-1795853000000
+  show_decoration_overlay = true
+  firefly_group_density = 0.85
+  firefly_group_amount = 0.85
+  firefly_group_size = 1.0
+  firefly_scale = 0.85
+  firefly_follow_mouse = true
+  firefly_landing = false
+  firefly_color_hex = #FFD88A
+}
+
+customization {
+  action = backgroundoptions
+  keepaspectratio = false
+}
+
+scroll_list_customization {
+  preserve_scroll_list_header_footer_aspect_ratio = true
+  render_scroll_list_header_shadow = true
+  render_scroll_list_footer_shadow = true
+  show_scroll_list_header_footer_preview_in_editor = false
+  repeat_scroll_list_header_texture = false
+  repeat_scroll_list_footer_texture = false
+  show_screen_background_overlay_on_custom_background = false
+  apply_vanilla_background_blur = false
+}
+
+layout_action_executable_blocks {
+}
+
+element {
+  source = [source:local]/config/fancymenu/assets/arcanum/logo_menu.png
+  repeat_texture = false
+  nine_slice_texture = false
+  nine_slice_texture_border_x = 5
+  nine_slice_texture_border_y = 5
+  image_tint = #FFFFFF
+  element_type = image
+  instance_identifier = b2200005-0000-4000-8000-000000000005-1795853000000
+  appearance_delay = no_delay
+  disappearance_delay = no_delay
+  fade_in_v2 = no_fading
+  fade_out = no_fading
+  auto_sizing = false
+  sticky_anchor = false
+  anchor_point = mid-left
+  x = 26
+  y = -136
+  width = 252
+  height = 62
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = b2200006-0000-4000-8000-000000000006-1795853000000
+  [loading_requirement_container_meta:b2200006-0000-4000-8000-000000000006-1795853000000] = [groups:][instances:]
+  base_opacity = 1.0
+}
+
+element {
+  button_element_executable_block_identifier = b2200007-0000-4000-8000-000000000007-1795853000000
+  [executable_action_instance:b2200008-0000-4000-8000-000000000008-1795853000000][action_type:joinserver] = 195.58.152.32:25603
+  [executable_block:b2200007-0000-4000-8000-000000000007-1795853000000][type:generic] = [executables:b2200008-0000-4000-8000-000000000008-1795853000000;]
+  backgroundnormal = [source:local]/config/fancymenu/assets/arcanum/btn_server.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/arcanum/btn_server_hover.png
+  underline_label_on_hover = false
+  transparent_background = false
+  restartbackgroundanimations = true
+  nine_slice_custom_background = false
+  label = 
+  navigatable = true
+  widget_active_state_requirement_container_identifier = b2200009-0000-4000-8000-000000000009-1795853000000
+  [loading_requirement_container_meta:b2200009-0000-4000-8000-000000000009-1795853000000] = [groups:][instances:]
+  element_type = custom_button
+  instance_identifier = b2200010-0000-4000-8000-000000000010-1795853000000
+  appearance_delay = no_delay
+  disappearance_delay = no_delay
+  fade_in_v2 = no_fading
+  fade_out = no_fading
+  auto_sizing = false
+  sticky_anchor = false
+  anchor_point = mid-left
+  x = 26
+  y = -58
+  width = 252
+  height = 42
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = b2200011-0000-4000-8000-000000000011-1795853000000
+  [loading_requirement_container_meta:b2200011-0000-4000-8000-000000000011-1795853000000] = [groups:][instances:]
+  base_opacity = 1.0
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = b2200012-0000-4000-8000-000000000012-1795853000000
+  [executable_block:b2200012-0000-4000-8000-000000000012-1795853000000][type:generic] = [executables:]
+  backgroundnormal = [source:local]/config/fancymenu/assets/arcanum/btn_singleplayer.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/arcanum/btn_singleplayer_hover.png
+  underline_label_on_hover = false
+  transparent_background = false
+  restartbackgroundanimations = true
+  nine_slice_custom_background = false
+  label = 
+  navigatable = true
+  widget_active_state_requirement_container_identifier = b2200013-0000-4000-8000-000000000013-1795853000000
+  [loading_requirement_container_meta:b2200013-0000-4000-8000-000000000013-1795853000000] = [groups:][instances:]
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_singleplayer_button
+  appearance_delay = no_delay
+  disappearance_delay = no_delay
+  fade_in_v2 = no_fading
+  fade_out = no_fading
+  auto_sizing = false
+  sticky_anchor = false
+  anchor_point = mid-left
+  x = 26
+  y = -8
+  width = 252
+  height = 35
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = b2200014-0000-4000-8000-000000000014-1795853000000
+  [loading_requirement_container_meta:b2200014-0000-4000-8000-000000000014-1795853000000] = [groups:][instances:]
+  is_hidden = false
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = b2200015-0000-4000-8000-000000000015-1795853000000
+  [executable_block:b2200015-0000-4000-8000-000000000015-1795853000000][type:generic] = [executables:]
+  backgroundnormal = [source:local]/config/fancymenu/assets/arcanum/btn_multiplayer.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/arcanum/btn_multiplayer_hover.png
+  underline_label_on_hover = false
+  transparent_background = false
+  restartbackgroundanimations = true
+  nine_slice_custom_background = false
+  label = 
+  navigatable = true
+  widget_active_state_requirement_container_identifier = b2200016-0000-4000-8000-000000000016-1795853000000
+  [loading_requirement_container_meta:b2200016-0000-4000-8000-000000000016-1795853000000] = [groups:][instances:]
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_multiplayer_button
+  appearance_delay = no_delay
+  disappearance_delay = no_delay
+  fade_in_v2 = no_fading
+  fade_out = no_fading
+  auto_sizing = false
+  sticky_anchor = false
+  anchor_point = mid-left
+  x = 26
+  y = 33
+  width = 252
+  height = 35
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = b2200017-0000-4000-8000-000000000017-1795853000000
+  [loading_requirement_container_meta:b2200017-0000-4000-8000-000000000017-1795853000000] = [groups:][instances:]
+  is_hidden = false
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = b2200018-0000-4000-8000-000000000018-1795853000000
+  [executable_block:b2200018-0000-4000-8000-000000000018-1795853000000][type:generic] = [executables:]
+  backgroundnormal = [source:local]/config/fancymenu/assets/arcanum/btn_mods.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/arcanum/btn_mods_hover.png
+  underline_label_on_hover = false
+  transparent_background = false
+  restartbackgroundanimations = true
+  nine_slice_custom_background = false
+  label = 
+  navigatable = true
+  widget_active_state_requirement_container_identifier = b2200019-0000-4000-8000-000000000019-1795853000000
+  [loading_requirement_container_meta:b2200019-0000-4000-8000-000000000019-1795853000000] = [groups:][instances:]
+  element_type = vanilla_button
+  instance_identifier = forge_titlescreen_mods_button
+  appearance_delay = no_delay
+  disappearance_delay = no_delay
+  fade_in_v2 = no_fading
+  fade_out = no_fading
+  auto_sizing = false
+  sticky_anchor = false
+  anchor_point = mid-left
+  x = 26
+  y = 74
+  width = 122
+  height = 35
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = b2200020-0000-4000-8000-000000000020-1795853000000
+  [loading_requirement_container_meta:b2200020-0000-4000-8000-000000000020-1795853000000] = [groups:][instances:]
+  is_hidden = false
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = b2200021-0000-4000-8000-000000000021-1795853000000
+  [executable_block:b2200021-0000-4000-8000-000000000021-1795853000000][type:generic] = [executables:]
+  backgroundnormal = [source:local]/config/fancymenu/assets/arcanum/btn_options.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/arcanum/btn_options_hover.png
+  underline_label_on_hover = false
+  transparent_background = false
+  restartbackgroundanimations = true
+  nine_slice_custom_background = false
+  label = 
+  navigatable = true
+  widget_active_state_requirement_container_identifier = b2200022-0000-4000-8000-000000000022-1795853000000
+  [loading_requirement_container_meta:b2200022-0000-4000-8000-000000000022-1795853000000] = [groups:][instances:]
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_options_button
+  appearance_delay = no_delay
+  disappearance_delay = no_delay
+  fade_in_v2 = no_fading
+  fade_out = no_fading
+  auto_sizing = false
+  sticky_anchor = false
+  anchor_point = mid-left
+  x = 156
+  y = 74
+  width = 122
+  height = 35
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = b2200023-0000-4000-8000-000000000023-1795853000000
+  [loading_requirement_container_meta:b2200023-0000-4000-8000-000000000023-1795853000000] = [groups:][instances:]
+  is_hidden = false
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = b2200024-0000-4000-8000-000000000024-1795853000000
+  [executable_block:b2200024-0000-4000-8000-000000000024-1795853000000][type:generic] = [executables:]
+  backgroundnormal = [source:local]/config/fancymenu/assets/arcanum/btn_quit.png
+  backgroundhovered = [source:local]/config/fancymenu/assets/arcanum/btn_quit_hover.png
+  underline_label_on_hover = false
+  transparent_background = false
+  restartbackgroundanimations = true
+  nine_slice_custom_background = false
+  label = 
+  navigatable = true
+  widget_active_state_requirement_container_identifier = b2200025-0000-4000-8000-000000000025-1795853000000
+  [loading_requirement_container_meta:b2200025-0000-4000-8000-000000000025-1795853000000] = [groups:][instances:]
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_quit_button
+  appearance_delay = no_delay
+  disappearance_delay = no_delay
+  fade_in_v2 = no_fading
+  fade_out = no_fading
+  auto_sizing = false
+  sticky_anchor = false
+  anchor_point = mid-left
+  x = 26
+  y = 115
+  width = 252
+  height = 35
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = b2200026-0000-4000-8000-000000000026-1795853000000
+  [loading_requirement_container_meta:b2200026-0000-4000-8000-000000000026-1795853000000] = [groups:][instances:]
+  is_hidden = false
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = b2200027-0000-4000-8000-000000000027-1795853000000
+  [executable_block:b2200027-0000-4000-8000-000000000027-1795853000000][type:generic] = [executables:]
+  element_type = vanilla_button
+  instance_identifier = mc_titlescreen_realms_button
+  anchor_point = vanilla
+  x = 220
+  y = 170
+  width = 200
+  height = 20
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = b2200028-0000-4000-8000-000000000028-1795853000000
+  [loading_requirement_container_meta:b2200028-0000-4000-8000-000000000028-1795853000000] = [groups:][instances:]
+  is_hidden = true
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = b2200029-0000-4000-8000-000000000029-1795853000000
+  [executable_block:b2200029-0000-4000-8000-000000000029-1795853000000][type:generic] = [executables:]
+  element_type = vanilla_button
+  instance_identifier = minecraft_realms_notification_icons_widget
+  anchor_point = vanilla
+  x = 355
+  y = 188
+  width = 62
+  height = 18
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = b2200030-0000-4000-8000-000000000030-1795853000000
+  [loading_requirement_container_meta:b2200030-0000-4000-8000-000000000030-1795853000000] = [groups:][instances:]
+  is_hidden = true
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = b2200031-0000-4000-8000-000000000031-1795853000000
+  [executable_block:b2200031-0000-4000-8000-000000000031-1795853000000][type:generic] = [executables:]
+  element_type = vanilla_button
+  instance_identifier = minecraft_logo_widget
+  anchor_point = vanilla
+  x = 192
+  y = 30
+  width = 256
+  height = 51
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = b2200032-0000-4000-8000-000000000032-1795853000000
+  [loading_requirement_container_meta:b2200032-0000-4000-8000-000000000032-1795853000000] = [groups:][instances:]
+  is_hidden = true
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = b2200033-0000-4000-8000-000000000033-1795853000000
+  [executable_block:b2200033-0000-4000-8000-000000000033-1795853000000][type:generic] = [executables:]
+  element_type = vanilla_button
+  instance_identifier = minecraft_splash_widget
+  anchor_point = vanilla
+  x = 393
+  y = 49
+  width = 100
+  height = 40
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = b2200034-0000-4000-8000-000000000034-1795853000000
+  [loading_requirement_container_meta:b2200034-0000-4000-8000-000000000034-1795853000000] = [groups:][instances:]
+  is_hidden = true
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = b2200035-0000-4000-8000-000000000035-1795853000000
+  [executable_block:b2200035-0000-4000-8000-000000000035-1795853000000][type:generic] = [executables:]
+  element_type = vanilla_button
+  instance_identifier = 376388
+  anchor_point = vanilla
+  x = 196
+  y = 228
+  width = 20
+  height = 20
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = b2200036-0000-4000-8000-000000000036-1795853000000
+  [loading_requirement_container_meta:b2200036-0000-4000-8000-000000000036-1795853000000] = [groups:][instances:]
+  is_hidden = true
+}
+
+vanilla_button {
+  button_element_executable_block_identifier = b2200037-0000-4000-8000-000000000037-1795853000000
+  [executable_block:b2200037-0000-4000-8000-000000000037-1795853000000][type:generic] = [executables:]
+  element_type = vanilla_button
+  instance_identifier = 604388
+  anchor_point = vanilla
+  x = 424
+  y = 228
+  width = 20
+  height = 20
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = b2200038-0000-4000-8000-000000000038-1795853000000
+  [loading_requirement_container_meta:b2200038-0000-4000-8000-000000000038-1795853000000] = [groups:][instances:]
+  is_hidden = true
+}

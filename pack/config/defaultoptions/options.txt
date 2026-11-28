@@ -48,7 +48,7 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["mod/punchy:resourcepacks/punchy","vanilla","fabric","generated/fragmentum_layer","mod_resources","moonlight:merged_pack","tinyskeletons:dynamically_copied_skeleton_textures","eatinganimations_compat","file/loadingbackgrounds_create_aronautics_skybound_1.21.X-2.0.0.zip"]
+resourcePacks:["mod/punchy:resourcepacks/punchy","vanilla","fabric","generated/fragmentum_layer","mod_resources","moonlight:merged_pack","tinyskeletons:dynamically_copied_skeleton_textures","eatinganimations_compat","file/arcanum_machina_loading_backgrounds.zip"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us

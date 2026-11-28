@@ -3082,8 +3082,8 @@
     },
     {
       "path": "config/defaultoptions/options.txt",
-      "size": 2606,
-      "sha256": "84b048cedf63dc292ea59a8cab088d097ddaf61db208e463e76304fdd394045b"
+      "size": 2583,
+      "sha256": "147e0ba584555c76f836e7ce13864792604d121cafdd024c0de4b9c086162239"
     },
     {
       "path": "config/delighto_flight-common.toml",
@@ -4508,7 +4508,7 @@
     {
       "path": "config/sodium-options.json",
       "size": 755,
-      "sha256": "caf6d1a6c7838e2645d64aa285f58abb90abd1021342e2b23cf6d06d410c7c63"
+      "sha256": "88e8196e60d8517613515502906684452f6a08a11dc98e5974842531dc5d1c27"
     },
     {
       "path": "config/sophisticatedbackpacks-common.toml",

@@ -6961,6 +6961,11 @@
       "sha256": "61cbcd1cf57cdb38eba89393c8f18ce9839d17d6e1cf5f7aa2616a82a2268e98"
     },
     {
+      "path": "mods/visual_keybinder-1.21.1-0.1.13-neoforge.jar",
+      "size": 353558,
+      "sha256": "e6d5e7deb72c16fecb46e49d5fd03949ae58b4a0b34fa1279bd94b36fbf0c167"
+    },
+    {
       "path": "mods/VisualWorkbench-v21.1.2-1.21.1-NeoForge.jar",
       "size": 76670,
       "sha256": "f9bea7865d57c0f32075fc1e8b760d048cf77513c8d93fa41c181ad190eb4449"

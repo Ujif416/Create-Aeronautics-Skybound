@@ -4362,8 +4362,8 @@
     },
     {
       "path": "config/serilum/starterkit.json",
-      "size": 3165,
-      "sha256": "be68798d1e564b2309f27fdc876f3742cd9a03c9c2e371bca4da6c478ec61acb"
+      "size": 614,
+      "sha256": "3f64f42a3b7b550b1e1ba644f697acca27eee8fbd106e8b59fc13a7222cf65d4"
     },
     {
       "path": "config/serilum/starterkit/commands/all2.txt",
@@ -4399,36 +4399,6 @@
       "path": "config/serilum/starterkit/descriptions/Witch.txt",
       "size": 52,
       "sha256": "290f6b832794b6876aba9da963b585ba4e99e5e6a972aebb52810e9a256e2f65"
-    },
-    {
-      "path": "config/serilum/starterkit/kits/all2.txt",
-      "size": 579,
-      "sha256": "a02fe4a37ac1bd2685dfa5d8eb405a0ce5a1efb0f4f5d95d372ea0f51b9ea858"
-    },
-    {
-      "path": "config/serilum/starterkit/kits/inactive/all.txt",
-      "size": 635,
-      "sha256": "9c6f1348d72b24d5abaef78788b53f2c52af1ebb8d0b22fc0408ad5b51311268"
-    },
-    {
-      "path": "config/serilum/starterkit/kits/inactive/Archer.txt",
-      "size": 683,
-      "sha256": "da428925f985e0dd610de8cd21e8ff5c433b3c08e8fa02cad65353fc2de9fb77"
-    },
-    {
-      "path": "config/serilum/starterkit/kits/inactive/Default.txt",
-      "size": 577,
-      "sha256": "4554f1366724aa5b7cbdf54f949664178c221685e2600e1646fef0341d520b7a"
-    },
-    {
-      "path": "config/serilum/starterkit/kits/inactive/Lumberjack.txt",
-      "size": 655,
-      "sha256": "e9ed3b597e1cff6e3f01f1a6ef16bc35181c7e1a4c6556b8399b5ea41d0d278f"
-    },
-    {
-      "path": "config/serilum/starterkit/kits/inactive/Witch.txt",
-      "size": 1115,
-      "sha256": "acf56d3d8e4737cf8fc0be14eab977a9eb266a57e004ed2e67c7882a249a62bb"
     },
     {
       "path": "config/servercore/config.yml",
@@ -5022,8 +4992,8 @@
     },
     {
       "path": "kubejs/server_scripts/01_factions_and_islands.js",
-      "size": 63257,
-      "sha256": "6306d127596488ed3015380b51ae793c76bb7ead16eaed5643bd09fdc9aecc5f"
+      "size": 70684,
+      "sha256": "1c1453e91453ea3282f66017140a9af7f86d389d98cf13fc1394b4b6be5f4208"
     },
     {
       "path": "kubejs/startup_scripts/main.js",
@@ -5097,8 +5067,8 @@
     },
     {
       "path": "mods/aetherial-islands-colossal-2.1.0.jar",
-      "size": 1533941,
-      "sha256": "c9f4ca598498c8ee971d7c7088dd27b0c7a4da71ef85aa891885673a1233a4cb"
+      "size": 1535396,
+      "sha256": "c40259fb95f50204035eb72b7a2506e1ced6f59b9de77c39483d7a9b598be99a"
     },
     {
       "path": "mods/AetherVillages-1.21.1-1.0.8-neoforge.jar",

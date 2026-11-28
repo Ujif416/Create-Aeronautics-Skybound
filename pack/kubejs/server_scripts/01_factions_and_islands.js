@@ -624,7 +624,7 @@ var ISLAND_DEFS = {
     targetZ: -3200,
     baseY: 108,
     radius: 132,
-    searchRadius: 800
+    searchRadius: 2160
   },
   mage2: {
     key: 'mage2',
@@ -635,7 +635,7 @@ var ISLAND_DEFS = {
     targetZ: 3200,
     baseY: 108,
     radius: 132,
-    searchRadius: 800
+    searchRadius: 2160
   },
   tech1: {
     key: 'tech1',
@@ -646,7 +646,7 @@ var ISLAND_DEFS = {
     targetZ: 0,
     baseY: 108,
     radius: 132,
-    searchRadius: 800
+    searchRadius: 2160
   },
   tech2: {
     key: 'tech2',
@@ -657,7 +657,7 @@ var ISLAND_DEFS = {
     targetZ: 0,
     baseY: 108,
     radius: 132,
-    searchRadius: 800
+    searchRadius: 2160
   }
 };
 
@@ -671,10 +671,94 @@ function getSolidTopY(level, x, z) {
   return topY;
 }
 
-function findLargeNaturalIsland(level, centerX, centerZ, maxRadius) {
-  var step = maxRadius >= 600 ? 320 : 160;
-  var neighborSpan = maxRadius >= 600 ? 64 : 28;
-  for (var r = 0; r <= maxRadius; r += step) {
+// Быстрая проверка деревьев внутри УЖЕ загруженного чанка (0 лишних генераций чанков при поиске!)
+function countTreesInLoadedChunk(level, cx, cz) {
+  var baseX = (cx >> 4) << 4;
+  var baseZ = (cz >> 4) << 4;
+  level.getChunk(cx >> 4, cz >> 4);
+  var treeCols = 0;
+  var pts = [
+    [2, 2], [8, 2], [13, 2],
+    [2, 8], [8, 8], [13, 8],
+    [2, 13], [8, 13], [13, 13]
+  ];
+  for (var i = 0; i < pts.length; i++) {
+    var sx = baseX + pts[i][0];
+    var sz = baseZ + pts[i][1];
+    var topWithLeaves = level.getHeight(MCHeightmapTypes.MOTION_BLOCKING, sx, sz);
+    var topNoLeaves = level.getHeight(MCHeightmapTypes.MOTION_BLOCKING_NO_LEAVES, sx, sz);
+    if (topWithLeaves - topNoLeaves >= 3 && topNoLeaves > 67) {
+      treeCols++;
+      continue;
+    }
+    if (topNoLeaves > 67) {
+      var topBlockId = '' + level.getBlockState(new MCBlockPos(sx, topNoLeaves - 1, sz)).block.id;
+      if (topBlockId.indexOf('_log') !== -1 || topBlockId.indexOf('_wood') !== -1 || topBlockId.indexOf('_stem') !== -1 || topBlockId.indexOf('leaves') !== -1) {
+        treeCols++;
+      }
+    }
+  }
+  return treeCols;
+}
+
+var FOREST_BIOME_KEYWORDS = [
+  'forest', 'taiga', 'jungle', 'grove', 'birch', 'cherry',
+  'wood', 'archwood', 'bamboo', 'autumn', 'maple', 'orchard', 'redwood', 'pine', 'spruce'
+];
+
+function sampleNoiseColumnFast(gen, rnd, level, x, z) {
+  var col = gen.getBaseColumn(x, z, level, rnd);
+  var topY = -1;
+  var bottomY = -1;
+  for (var y = 225; y >= -44; y--) {
+    var st = col.getBlock(y);
+    if (!st.isAir()) {
+      if (topY === -1) {
+        if (!st.getFluidState().isEmpty() || y <= 68) return null;
+        topY = y + 1;
+      }
+      bottomY = y;
+    }
+  }
+  if (topY < 70) return null;
+  return { topY: topY, bottomY: bottomY, thickness: topY - bottomY };
+}
+
+function isForestedNoiseBiome(biomeSource, sampler, x, y, z, faction) {
+  try {
+    var holder = biomeSource.getNoiseBiome(x >> 2, (y + 2) >> 2, z >> 2, sampler);
+    var optKey = holder.unwrapKey();
+    if (optKey.isPresent()) {
+      var idStr = ('' + optKey.get().location()).toLowerCase();
+      // Для Техников исключаем чисто магические леса (чтобы срубленная древесина не блокировалась Законом Разделения)
+      if (faction === 'tech' && (idStr.indexOf('thaumaturge:') === 0 || idStr.indexOf('ars_') === 0 || idStr.indexOf('occultism:') === 0)) {
+        return '';
+      }
+      for (var i = 0; i < FOREST_BIOME_KEYWORDS.length; i++) {
+        if (idStr.indexOf(FOREST_BIOME_KEYWORDS[i]) !== -1) return idStr;
+      }
+    }
+  } catch (e) {}
+  return '';
+}
+
+function findLargeNaturalIsland(level, centerX, centerZ, maxRadius, requireTrees, faction) {
+  var chunkSource = level.getChunkSource();
+  var gen = chunkSource.getGenerator();
+  var rnd = chunkSource.randomState();
+  var biomeSource = gen.getBiomeSource();
+  var sampler = rnd.sampler();
+
+  var limitR = Math.min(maxRadius, 2200);
+  var step = requireTrees ? 112 : 64;
+  var inlandSpan = requireTrees ? 80 : 28;
+  var minThick = requireTrees ? 52 : 22;
+  var bestFallbackCoords = null;
+  var chosenCoords = null;
+  var chosenBiome = '';
+
+  // Математический поиск по функции плотности и биомам БЕЗ генерации чанков (~20 мс на сотни точек!)
+  for (var r = 0; r <= limitR && !chosenCoords; r += step) {
     var candidates = [];
     if (r === 0) {
       candidates.push([centerX, centerZ]);
@@ -691,25 +775,63 @@ function findLargeNaturalIsland(level, centerX, centerZ, maxRadius) {
     for (var i = 0; i < candidates.length; i++) {
       var cx = candidates[i][0];
       var cz = candidates[i][1];
-      var cy = getSolidTopY(level, cx, cz);
-      if (cy < 72) continue;
-      // Проверяем, что под островом мощная толща породы под руды (минимум 32 блока глубиной!)
-      if (maxRadius >= 600) {
-        var deepCheck = level.getBlockState(new MCBlockPos(cx, Math.max(-20, cy - 32), cz));
-        if (deepCheck.isAir()) continue;
+      var cInfo = sampleNoiseColumnFast(gen, rnd, level, cx, cz);
+      if (!cInfo || cInfo.thickness < minThick) continue;
+
+      // Проверяем, что точка находится глубоко внутри широкого континента, а не на краю обрыва
+      var n1 = sampleNoiseColumnFast(gen, rnd, level, cx + inlandSpan, cz);
+      if (!n1 || n1.thickness < 28) continue;
+      var n2 = sampleNoiseColumnFast(gen, rnd, level, cx - inlandSpan, cz);
+      if (!n2 || n2.thickness < 28) continue;
+      var n3 = sampleNoiseColumnFast(gen, rnd, level, cx, cz + inlandSpan);
+      if (!n3 || n3.thickness < 28) continue;
+      var n4 = sampleNoiseColumnFast(gen, rnd, level, cx, cz - inlandSpan);
+      if (!n4 || n4.thickness < 28) continue;
+
+      if (!bestFallbackCoords) {
+        bestFallbackCoords = [cx, cz];
       }
-      var solidNeighbors = 0;
-      var offsets = [[neighborSpan, 0], [-neighborSpan, 0], [0, neighborSpan], [0, -neighborSpan]];
-      for (var k = 0; k < offsets.length; k++) {
-        var ny = getSolidTopY(level, cx + offsets[k][0], cz + offsets[k][1]);
-        if (ny >= 70 && Math.abs(ny - cy) <= 36) solidNeighbors++;
+
+      if (!requireTrees) {
+        chosenCoords = [cx, cz];
+        break;
       }
-      if (solidNeighbors >= 3) {
-        return { x: cx, y: cy, z: cz };
+
+      var fBiome = isForestedNoiseBiome(biomeSource, sampler, cx, cInfo.topY, cz, faction);
+      if (fBiome) {
+        chosenCoords = [cx, cz];
+        chosenBiome = fBiome;
+        break;
       }
     }
   }
-  return null;
+
+  var win = chosenCoords || bestFallbackCoords;
+  if (!win) return null;
+
+  // Загружаем ТОЛЬКО ОДИН финальный чанк выбранного лесного континента!
+  var fx = win[0];
+  var fz = win[1];
+  var fy = getSolidTopY(level, fx, fz);
+  if (fy < 68) return null;
+
+  var groundId = '' + level.getBlockState(new MCBlockPos(fx, fy - 1, fz)).block.id;
+  if (groundId.indexOf('_log') !== -1 || groundId.indexOf('_wood') !== -1) {
+    for (var adj = 2; adj <= 8; adj += 2) {
+      var altY = getSolidTopY(level, fx + adj, fz);
+      var altId = altY > 68 ? ('' + level.getBlockState(new MCBlockPos(fx + adj, altY - 1, fz)).block.id) : '_log';
+      if (altY > 68 && altId.indexOf('_log') === -1) {
+        fx = fx + adj;
+        fy = altY;
+        break;
+      }
+    }
+  }
+
+  if (chosenBiome) {
+    console.info('[Arcanum & Machina] Найден лесной континент (' + chosenBiome + ') в [' + fx + ', ' + fy + ', ' + fz + ']');
+  }
+  return { x: fx, y: fy, z: fz };
 }
 
 function tryBlockState(idStr, fallbackState) {
@@ -837,26 +959,42 @@ function sculptColossalIsland(level, cx, cy, cz, radius, faction) {
 
 function buildArrivalSanctum(level, cx, cy, cz, faction) {
   var air = MCBlocks.AIR.defaultBlockState();
-  var floorMain = faction === 'mage'
-    ? MCBlocks.POLISHED_DEEPSLATE.defaultBlockState()
-    : faction === 'tech'
-      ? MCBlocks.POLISHED_TUFF.defaultBlockState()
-      : MCBlocks.STONE_BRICKS.defaultBlockState();
-  var floorAccent = faction === 'mage'
-    ? MCBlocks.AMETHYST_BLOCK.defaultBlockState()
-    : faction === 'tech'
-      ? MCBlocks.COPPER_BLOCK.defaultBlockState()
-      : MCBlocks.CHISELED_STONE_BRICKS.defaultBlockState();
-  var pillar = faction === 'mage'
-    ? MCBlocks.QUARTZ_PILLAR.defaultBlockState()
-    : faction === 'tech'
-      ? MCBlocks.POLISHED_ANDESITE.defaultBlockState()
-      : MCBlocks.SMOOTH_STONE.defaultBlockState();
-  var light = faction === 'mage'
-    ? MCBlocks.SEA_LANTERN.defaultBlockState()
-    : faction === 'tech'
-      ? MCBlocks.OCHRE_FROGLIGHT.defaultBlockState()
-      : MCBlocks.GLOWSTONE.defaultBlockState();
+
+  // На островах Магов и Техников НЕ сглаживаем рельеф и НЕ вырубаем деревья!
+  // Ставим только аккуратный 3x3 рунический камень прямо под точкой прибытия, сохраняя 100% естественного биома.
+  if (faction !== 'none') {
+    var padMain = faction === 'mage'
+      ? MCBlocks.POLISHED_DEEPSLATE.defaultBlockState()
+      : MCBlocks.POLISHED_TUFF.defaultBlockState();
+    var padCenter = faction === 'mage'
+      ? MCBlocks.AMETHYST_BLOCK.defaultBlockState()
+      : MCBlocks.COPPER_BLOCK.defaultBlockState();
+    var padLight = faction === 'mage'
+      ? MCBlocks.SEA_LANTERN.defaultBlockState()
+      : MCBlocks.OCHRE_FROGLIGHT.defaultBlockState();
+
+    for (var rx = -1; rx <= 1; rx++) {
+      for (var rz = -1; rz <= 1; rz++) {
+        var blk = (rx === 0 && rz === 0) ? padCenter : ((Math.abs(rx) === 1 && Math.abs(rz) === 1) ? padLight : padMain);
+        level.setBlock(new MCBlockPos(cx + rx, cy - 1, cz + rz), blk, 2);
+        // Освобождаем только 2 блока роста непосредственно над 3x3 камнем, не трогая кроны соседних деревьев
+        for (var ry = 0; ry <= 2; ry++) {
+          var abovePos = new MCBlockPos(cx + rx, cy + ry, cz + rz);
+          var aboveId = '' + level.getBlockState(abovePos).block.id;
+          if (aboveId.indexOf('_log') === -1 && aboveId.indexOf('_wood') === -1 || (rx === 0 && rz === 0)) {
+            level.setBlock(abovePos, air, 2);
+          }
+        }
+      }
+    }
+    return;
+  }
+
+  // Только Нейтральный Остров Равновесия имеет святилище спавна
+  var floorMain = MCBlocks.STONE_BRICKS.defaultBlockState();
+  var floorAccent = MCBlocks.CHISELED_STONE_BRICKS.defaultBlockState();
+  var pillar = MCBlocks.SMOOTH_STONE.defaultBlockState();
+  var light = MCBlocks.GLOWSTONE.defaultBlockState();
 
   for (var dx = -4; dx <= 4; dx++) {
     for (var dz = -4; dz <= 4; dz++) {
@@ -877,31 +1015,6 @@ function buildArrivalSanctum(level, cx, cy, cz, faction) {
     level.setBlock(new MCBlockPos(px, cy + 1, pz), pillar, 2);
     level.setBlock(new MCBlockPos(px, cy + 2, pz), pillar, 2);
     level.setBlock(new MCBlockPos(px, cy + 3, pz), light, 2);
-  }
-
-  if (faction !== 'none') {
-    var logState = faction === 'mage' ? MCBlocks.DARK_OAK_LOG.defaultBlockState() : MCBlocks.SPRUCE_LOG.defaultBlockState();
-    var leafState = faction === 'mage' ? MCBlocks.AZALEA_LEAVES.defaultBlockState() : MCBlocks.SPRUCE_LEAVES.defaultBlockState();
-    var treeSpots = [[14, -12], [-15, 11], [-14, -15], [16, 16], [24, 0], [-24, -4]];
-    for (var t = 0; t < treeSpots.length; t++) {
-      var tx = cx + treeSpots[t][0];
-      var tz = cz + treeSpots[t][1];
-      var ty = getSolidTopY(level, tx, tz);
-      if (ty < 70) continue;
-      for (var h = 0; h < 5; h++) {
-        level.setBlock(new MCBlockPos(tx, ty + h, tz), logState, 2);
-      }
-      for (var lx = -2; lx <= 2; lx++) {
-        for (var lz = -2; lz <= 2; lz++) {
-          for (var ly = 3; ly <= 5; ly++) {
-            if (Math.abs(lx) === 2 && Math.abs(lz) === 2 && ly === 5) continue;
-            var pos = new MCBlockPos(tx + lx, ty + ly, tz + lz);
-            if (level.getBlockState(pos).isAir()) level.setBlock(pos, leafState, 2);
-          }
-        }
-      }
-      level.setBlock(new MCBlockPos(tx, ty + 6, tz), leafState, 2);
-    }
   }
 }
 
@@ -934,7 +1047,7 @@ function ensureIsland(server, key) {
     }
   }
 
-  var found = findLargeNaturalIsland(overworld, def.targetX, def.targetZ, def.searchRadius);
+  var found = findLargeNaturalIsland(overworld, def.targetX, def.targetZ, def.searchRadius, def.faction !== 'none', def.faction);
   var mode = 'natural';
   if (!found) {
     mode = 'sculpted';
@@ -1059,23 +1172,68 @@ function teleportToIsland(player, island) {
   } catch (e) {}
 }
 
+var UNWANTED_STARTER_TOOL_PATTERNS = [
+  '_pickaxe',
+  '_axe',
+  '_shovel',
+  '_hoe',
+  '_sword',
+  'minecraft:bow',
+  'minecraft:crossbow',
+  'minecraft:shield',
+  'minecraft:arrow',
+  'minecraft:leather_helmet',
+  'minecraft:leather_chestplate',
+  'minecraft:leather_leggings',
+  'minecraft:leather_boots',
+  'minecraft:iron_helmet',
+  'minecraft:iron_chestplate',
+  'minecraft:iron_leggings',
+  'minecraft:iron_boots',
+  'crafting_on_a_stick:'
+];
+
+function clearUnwantedStarterGear(player) {
+  if (!player) return;
+  var inv = player.inventory;
+  var changed = false;
+  for (var i = 0; i < inv.containerSize; i++) {
+    var st = inv.getItem(i);
+    if (!st || st.isEmpty()) continue;
+    var id = '' + st.id;
+    var remove = false;
+    for (var p = 0; p < UNWANTED_STARTER_TOOL_PATTERNS.length; p++) {
+      if (id.indexOf(UNWANTED_STARTER_TOOL_PATTERNS[p]) !== -1) {
+        remove = true;
+        break;
+      }
+    }
+    if (remove) {
+      st.setCount(0);
+      inv.removeItemNoUpdate(i);
+      changed = true;
+    }
+  }
+  if (changed) {
+    try { player.inventoryMenu.broadcastFullState(); } catch (e) {}
+  }
+}
+
 function grantStarterKit(player, faction) {
   if (player.stages.has('starter_received')) return;
   player.stages.add('starter_received');
+  clearUnwantedStarterGear(player);
 
-  player.give(Item.of('minecraft:bread', 12));
-  player.give(Item.of('minecraft:torch', 16));
-  player.give(Item.of('minecraft:oak_sapling', 4));
-
+  // Выдаём ТОЛЬКО стартовые фракционные принадлежности (без кирок, топоров, лопат, луков, еды и брёвен!)
   if (faction === 'mage') {
     try { player.give(Item.of('ars_nouveau:worn_notebook', 1)); } catch (e) {}
     try { player.give(Item.of('ars_nouveau:novice_spell_book', 1)); } catch (e) {}
-    try { player.give(Item.of('minecraft:amethyst_shard', 8)); } catch (e) {}
+    try { player.give(Item.of('minecraft:amethyst_shard', 4)); } catch (e) {}
     try { player.give(Item.of('aeronautics:levitite', 2)); } catch (e) {}
   } else if (faction === 'tech') {
     try { player.give(Item.of('create:wrench', 1)); } catch (e) {}
     try { player.give(Item.of('create:goggles', 1)); } catch (e) {}
-    try { player.give(Item.of('create:andesite_alloy', 12)); } catch (e) {}
+    try { player.give(Item.of('create:andesite_alloy', 8)); } catch (e) {}
   }
 }
 
@@ -1177,6 +1335,16 @@ PlayerEvents.loggedIn(function(event) {
 
   var faction = getPlayerFaction(player);
   if (faction === 'none') {
+    if (!player.stages.has('spawn_tools_cleared')) {
+      player.stages.add('spawn_tools_cleared');
+      clearUnwantedStarterGear(player);
+      event.server.scheduleInTicks(8, function() {
+        if (player.isAlive() && getPlayerFaction(player) === 'none') clearUnwantedStarterGear(player);
+      });
+      event.server.scheduleInTicks(28, function() {
+        if (player.isAlive() && getPlayerFaction(player) === 'none') clearUnwantedStarterGear(player);
+      });
+    }
     var neutral = ensureIsland(event.server, 'neutral');
     var dx = player.x - neutral.x;
     var dz = player.z - neutral.z;
@@ -1201,6 +1369,16 @@ PlayerEvents.respawned(function(event) {
   if (!player) return;
   var faction = getPlayerFaction(player);
   if (faction === 'none') {
+    if (!player.stages.has('spawn_tools_cleared')) {
+      player.stages.add('spawn_tools_cleared');
+      clearUnwantedStarterGear(player);
+      event.server.scheduleInTicks(8, function() {
+        if (player.isAlive() && getPlayerFaction(player) === 'none') clearUnwantedStarterGear(player);
+      });
+      event.server.scheduleInTicks(28, function() {
+        if (player.isAlive() && getPlayerFaction(player) === 'none') clearUnwantedStarterGear(player);
+      });
+    }
     var neutral = ensureIsland(event.server, 'neutral');
     teleportToIsland(player, neutral);
     giveSelectorStarIfMissing(player);
@@ -1539,7 +1717,21 @@ ServerEvents.basicCommand('arcanum', function(event) {
           if (!stScan.isAir()) bottomAtCenter = scanY;
         }
         var voidBottomAir = ov.getBlockState(new MCBlockPos(isl.x, -60, isl.z)).isAir();
-        console.info('[Arcanum & Machina] METRICS ' + ik + ': pos=[' + isl.x + ',' + isl.y + ',' + isl.z + '] thickness=' + Math.max(0, topAtCenter - bottomAtCenter) + ' (bottomY=' + bottomAtCenter + ', topY=' + topAtCenter + ', voidClean=' + voidBottomAir + ')');
+        var treesNear = countTreesInLoadedChunk(ov, isl.x, isl.z);
+        var minSurf = 999;
+        var maxSurf = -999;
+        var mGen = ov.getChunkSource().getGenerator();
+        var mRnd = ov.getChunkSource().randomState();
+        for (var rx = -32; rx <= 32; rx += 16) {
+          for (var rz = -32; rz <= 32; rz += 16) {
+            var sc = sampleNoiseColumnFast(mGen, mRnd, ov, isl.x + rx, isl.z + rz);
+            if (sc) {
+              if (sc.topY < minSurf) minSurf = sc.topY;
+              if (sc.topY > maxSurf) maxSurf = sc.topY;
+            }
+          }
+        }
+        console.info('[Arcanum & Machina] METRICS ' + ik + ' (' + isl.mode + '): pos=[' + isl.x + ',' + isl.y + ',' + isl.z + '] thickness=' + Math.max(0, topAtCenter - bottomAtCenter) + ' relief=' + Math.max(0, maxSurf - minSurf) + ' chunkTrees=' + treesNear + '/9 voidClean=' + voidBottomAir);
       }
     }
     console.info('[Arcanum & Machina] INITALL: все 5 островов успешно инициализированы!');
